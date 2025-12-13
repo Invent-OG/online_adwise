@@ -135,7 +135,6 @@ const footerLinkGroups: FooterLinkGroup[] = [
 			{ title: 'Government & Public Sector', href: '#' },
 			{ title: 'Nonprofits', href: '#' },
 			{ title: 'Education', href: '#' },
-			{ title: 'Healthcare', href: '#' },
 		],
 	},
 	{
