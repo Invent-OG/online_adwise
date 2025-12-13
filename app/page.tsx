@@ -4,6 +4,8 @@ import { WhoWeAre } from "@/components/who-we-are";
 import { ServiceMarquee } from "@/components/service-marquee";
 import StickyCard from "@/components/StickyCard";
 import { AdService } from "@/components/ad-service";
+import BeyondAds from "@/components/BeyondAds";
+import VideoPacks from "@/components/VideoPacks";
 
 export default function Home() {
   return (
@@ -14,6 +16,8 @@ export default function Home() {
       <ServiceMarquee />
       <StickyCard />
       <AdService />
+      <BeyondAds />
+      <VideoPacks />
     </main>
   );
 }
