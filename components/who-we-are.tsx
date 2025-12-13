@@ -16,7 +16,7 @@ import {
   Video,
   Bot,
 } from "lucide-react";
-import { ElectricCard } from "./ui/electric-card";
+import { ProfileCard } from "./ui/profile-card";
 
 /* ---------------- DATA ---------------- */
 const features = [
@@ -110,9 +110,9 @@ export function WhoWeAre() {
             </div>
           </motion.div>
 
-          {/* RIGHT — ELECTRIC CARD */}
+          {/* RIGHT — PROFILE CARD */}
           <div className="lg:col-span-7 relative flex items-center justify-center">
-             <ElectricCard />
+             <ProfileCard />
           </div>
         </div>
       </div>

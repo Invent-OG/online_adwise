@@ -1,0 +1,144 @@
+.wrapper {
+  position: relative;
+  width: 100%;
+  height: 600px;
+  overflow: hidden;
+  background: transparent;
+  font-family: "Roboto", sans-serif;
+}
+
+/* Initial state: Small circle */
+.profileCard {
+  background: #FFB300;
+  width: 56px;
+  height: 56px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  z-index: 3;
+  overflow: hidden;
+  opacity: 0;
+  margin-top: 70px;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.16), 0px 3px 6px rgba(0, 0, 0, 0.23);
+}
+
+/* Triggered state */
+.profileCard.animating {
+  animation: init 0.5s 0.2s cubic-bezier(0.55, 0.055, 0.675, 0.19) forwards, 
+             moveDown 1s 0.8s cubic-bezier(0.6, -0.28, 0.735, 0.045) forwards, 
+             moveUp 1s 1.8s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards, 
+             materia 0.5s 2.7s cubic-bezier(0.86, 0, 0.07, 1) forwards;
+}
+
+.header {
+  width: 100%;
+  padding: 40px 20px 20px 20px;
+  background: #FFFFFF;
+  color: #414241;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between; /* Distribute space evenly */
+  padding-bottom: 30px; /* Add bottom padding */
+  opacity: 0;
+  
+}
+
+.profileCard.animating .header {
+  animation: moveIn 1s 3.1s ease forwards;
+}
+
+.header h1 {
+  color: #ca8a04;
+  font-weight: 500;
+  margin: 0px 0px 5px 0px;
+  font-size: 24px;
+}
+
+.header h2 {
+  font-weight: 500;
+  margin: 0px 0px 5px 0px;
+  font-size: 16px;
+}
+
+.profileBio {
+  width: 100%;
+  padding: 0 40px 20px 60px;
+  background: #FFFFFF;
+  color: #333333;
+  text-align: left;
+  opacity: 0;
+}
+
+.footer {
+  width: 100%;
+  padding: 0 40px;
+  text-align: center;
+  opacity: 0;
+  margin-top: auto; /* Push to bottom if needed */
+}
+
+.footer p {
+  font-size: 13px;
+  color: #666;
+  margin-bottom: 20px;
+  line-height: 1.5;
+}
+
+.ctaButton {
+  background: #ca8a04;
+  color: white;
+  border: none;
+  padding: 10px 24px;
+  border-radius: 30px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.2s;
+  box-shadow: 0 4px 10px rgba(255, 87, 34, 0.3);
+}
+
+.ctaButton:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 15px rgba(255, 87, 34, 0.4);
+}
+
+.profileCard.animating .profileBio {
+  animation: moveIn 1s 3.3s ease forwards;
+}
+
+.profileCard.animating .footer {
+  animation: moveIn 1s 3.5s ease forwards;
+}
+
+/* Animations */
+@keyframes init {
+  0% { width: 0px; height: 0px; }
+  100% { width: 56px; height: 56px; margin-top: 0px; opacity: 1; }
+}
+
+@keyframes moveDown {
+  0% { top: 50%; }
+  50% { top: 40%; }
+  100% { top: 100%; }
+}
+
+@keyframes moveUp {
+  0% { background: #ca8a04; top: 100%; }
+  50% { top: 40%; }
+  100% { top: 50%; background: #E0E0E0; }
+}
+
+@keyframes materia {
+  0% { background: #E0E0E0; }
+  50% { border-radius: 4px; }
+  100% { width: 320px; height: 480px; background: #FFFFFF; border-radius: 16px; }
+}
+
+@keyframes moveIn {
+  0% { margin-top: 50px; opacity: 0; }
+  100% { opacity: 1; margin-top: -20px; }
+}

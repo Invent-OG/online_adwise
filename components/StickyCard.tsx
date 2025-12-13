@@ -221,38 +221,39 @@ export default function StickyCard() {
                 if (el) cardsRef.current[index] = el;
               }}
               style={{ zIndex: cards.length - index }}
-              className="absolute inset-0 rounded-3xl 
-bg-white shadow-[0_20px_40px_-20px_rgba(0,0,0,0.2)]
-                         p-8 text-black "
+              className="absolute inset-0 flex flex-col justify-between rounded-3xl border border-neutral-200 bg-white p-8 shadow-xl transition-shadow duration-300 hover:shadow-2xl bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:24px_24px]"
             >
-              {/* Step */}
-              <p className="mb-2 text-sm uppercase tracking-widest text-yellow-600">
-                {card.step}
-              </p>
+              <div>
+                {/* Step */}
+                <p className="mb-2 text-xs font-bold uppercase tracking-widest text-yellow-600">
+                  {card.step}
+                </p>
 
-              {/* Title */}
-              <h3 className="mb-4 text-3xl font-extrabold text-yellow-600">
-                {card.title}
-              </h3>
+                {/* Title */}
+                <h3 className="mb-4 text-3xl font-extrabold text-neutral-900">
+                  {card.title}
+                </h3>
 
-              {/* Description */}
-              <p className="mb-6 text-black/90">
-                {card.desc}
-              </p>
+                {/* Description */}
+                <p className="mb-6 text-neutral-600 leading-relaxed">
+                  {card.desc}
+                </p>
 
-              {/* Bullet points */}
-              <ul className="mb-6 space-y-2 text-sm">
-                {card.points.map((point, i) => (
-                  <li key={i} className="flex items-start gap-2">
-                    <span className="mt-1 h-2 w-2 rounded-full bg-white" />
-                    <span>{point}</span>
-                  </li>
-                ))}
-              </ul>
+                {/* Bullet points */}
+                <ul className="mb-6 space-y-3 text-sm text-neutral-700">
+                  {card.points.map((point, i) => (
+                    <li key={i} className="flex items-start gap-3">
+                      <span className="mt-1.5 h-2 w-2 shrink-0 rounded-full bg-yellow-500" />
+                      <span>{point}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
 
               {/* Outcome */}
-              <div className="rounded-xl bg-white/20 p-4 text-sm font-semibold text-yellow-600">
-                📌 Outcome: {card.outcome}
+              <div className="rounded-xl border border-yellow-100 bg-yellow-50/50 p-4 text-sm font-medium text-yellow-800">
+                <span className="mr-2">📌</span>
+                <strong>Outcome:</strong> {card.outcome}
               </div>
             </div>
           ))}
@@ -262,7 +263,7 @@ bg-white shadow-[0_20px_40px_-20px_rgba(0,0,0,0.2)]
         <div className="max-w-md">
           <h1 className="text-5xl font-extrabold leading-tight text-neutral-900">
             WHAT YOUR WEBSITE <br />
-            <span className="text-yellow-600">TRULY NEEDS</span>
+            <span className="text-neutral-400">TRULY NEEDS</span>
           </h1>
         </div>
       </div>
