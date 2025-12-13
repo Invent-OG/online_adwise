@@ -53,6 +53,7 @@ export function WhoWeAre() {
           
           {/* LEFT — MANIFESTO */}
           <motion.div
+          
             ref={headerRef}
             initial={{ opacity: 0, y: 30 }}
             animate={isInView ? { opacity: 1, y: 0 } : {}}

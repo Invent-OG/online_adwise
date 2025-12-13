@@ -16,7 +16,7 @@ function WhyOnlineAdwise() {
       <div className="max-w-6xl mx-auto px-6">
 
         {/* HEADER */}
-        <div className="text-center mb-20">
+        <div data-aos="fade-up" className="text-center mb-20">
           <p className="text-xs uppercase tracking-widest font-semibold text-yellow-500 mb-4">
             The Difference
           </p>
@@ -31,7 +31,7 @@ function WhyOnlineAdwise() {
         </div>
 
         {/* CORE PILLARS */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 mb-20">
+        <div data-aos="fade-up" className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 mb-20">
           {[
             {
               title: "Psychology",
@@ -82,7 +82,7 @@ function WhyOnlineAdwise() {
         </div>
 
         {/* COMPARISON – NEW STYLE */}
-<div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+<div data-aos="fade-right" className="grid grid-cols-1 lg:grid-cols-2 gap-8">
 
   {/* NO MORE CARD */}
   <div className="relative rounded-3xl border border-neutral-200 bg-neutral-50 p-8 overflow-hidden">

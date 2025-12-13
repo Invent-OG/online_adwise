@@ -92,10 +92,9 @@ export default function CaseStudy() {
       <div className="max-w-6xl mx-auto">
         
         {/* === HEADER === */}
-        <div className="text-center mb-20 animate-fade-in-up">
-          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-yellow-50 border border-yellow-100 mb-6">
-            <span className="w-2 h-2 rounded-full bg-yellow-600 animate-pulse"></span>
-            <span className="text-xs font-bold tracking-widest text-yellow-700 uppercase">Case Study</span>
+        <div data-aos="fade-up" className="text-center mb-20 animate-fade-in-up">
+          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full mb-6">
+            <span className="text-xs font-bold tracking-widest text-yellow-500 uppercase">Case Study</span>
           </div>
           <h2 className="text-4xl md:text-6xl font-bold text-slate-900 mb-4 tracking-tight">
             HVAC Growth <span className="text-slate-400">Partner</span>
@@ -106,10 +105,10 @@ export default function CaseStudy() {
         </div>
 
         {/* === MAIN BENTO GRID === */}
-        <div className="grid lg:grid-cols-12 gap-8 mb-32">
+        <div data-aos="fade-right" className="grid lg:grid-cols-12 gap-8 mb-32">
           
           {/* Left Column: Challenges (Span 4) */}
-          <div className="lg:col-span-4 flex flex-col gap-6">
+          <div data-aos="fade-left" className="lg:col-span-4 flex flex-col gap-6">
             <div className="p-8 rounded-[32px] bg-white/40 backdrop-blur-xl border border-white/60 shadow-lg h-full">
               <h3 className="text-xl font-bold text-slate-900 mb-6 flex items-center gap-2">
                 <XCircle className="text-red-500" />
@@ -174,7 +173,7 @@ export default function CaseStudy() {
         </div>
 
         {/* === ANIMATED TIMELINE === */}
-        <div ref={timelineRef} className="relative pt-4 pb-12">
+        <div data-aos="fade-up" ref={timelineRef} className="relative pt-4 pb-12">
           
           {/* Section Header */}
           <div className="text-center mb-16">

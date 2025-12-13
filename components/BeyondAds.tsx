@@ -41,7 +41,7 @@ export default function BeyondAds() {
   return (
     <section ref={sectionRef} className="bg-white">
       {/* INTRO */}
-      <div className="max-w-7xl text-center mx-auto px-6 pt-32 pb-24">
+      <div data-aos="fade-up" className="max-w-7xl text-center mx-auto px-6 pt-32 pb-24">
         <p className="text-yellow-500 uppercase tracking-widest text-xs font-semibold mb-4">
           Beyond Ads
         </p>

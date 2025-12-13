@@ -110,7 +110,7 @@ export function StatsSection({
 
   return (
     <section className="w-full bg-neutral-50 py-28">
-      <div className="mx-auto max-w-7xl px-6 lg:px-8">
+      <div data-aos="fade-up" className="mx-auto max-w-7xl px-6 lg:px-8">
         {/* HEADER */}
         <div className="mb-20 text-center">
           <h2 className="text-4xl font-extrabold text-black sm:text-5xl">

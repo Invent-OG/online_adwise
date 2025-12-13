@@ -155,9 +155,9 @@ import CardSwap, { Card } from "./CardSwap";
 function VideoPacks() {
   return (
     <section className="w-full bg-white py-32">
-      <div className="max-w-6xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
+      <div  className="max-w-6xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
         {/* LEFT CONTENT */}
-        <div>
+        <div data-aos="fade-up">
           <p className="text-yellow-500 uppercase tracking-widest text-xs font-semibold mb-4">
             Video Package Store
           </p>

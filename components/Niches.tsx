@@ -112,7 +112,7 @@ function Niches() {
         <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-yellow-500/5 rounded-full blur-3xl" />
       </div>
 
-      <div className="max-w-6xl mx-auto px-6 relative z-10">
+      <div data-aos="fade-up" className="max-w-6xl mx-auto px-6 relative z-10">
         {/* HEADER - Modern design */}
         <div ref={headerRef} className="max-w-4xl mx-auto text-center mb-20">
             <p className="text-yellow-500 uppercase tracking-widest mb-4 text-xs font-semibold">
@@ -184,9 +184,9 @@ ref={(el) => {
     </p>
   </div>
 
-  <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+  <div  className="grid grid-cols-1 lg:grid-cols-2 gap-12">
     {/* Left side - Feature cards in grid */}
-    <div className="grid grid-cols-2 gap-6">
+    <div data-aos="fade-up" className="grid grid-cols-2 gap-6">
       {[
         { 
           title: "Video Assets", 
@@ -236,7 +236,7 @@ ref={(el) => {
     </div>
 
     {/* Right side - Benefits list */}
-    <div className="bg-gradient-to-br from-gray-50 to-white rounded-2xl p-8 shadow-lg">
+    <div data-aos="fade-down" className="bg-gradient-to-br from-gray-50 to-white rounded-2xl p-8 shadow-lg">
       <h4 className="text-2xl font-bold text-gray-900 mb-8 flex items-center gap-3">
         <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-yellow-500 to-yellow-500 flex items-center justify-center">
           <svg className="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">

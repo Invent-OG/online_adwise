@@ -125,7 +125,7 @@ export default function NichesSpecialize() {
   return (
     <section className="w-full py-24 overflow-hidden relative bg-[#F5F7FA]">
       {/* Header */}
-      <div className="max-w-7xl mx-auto px-6 mb-16 text-center">
+      <div data-aos="fade-up" className="max-w-7xl mx-auto px-6 mb-16 text-center">
         <h2 className="text-4xl md:text-6xl font-bold text-slate-900 mb-4">
           Niches We <br /> <span className="text-neutral-600">Specialize In</span>
         </h2>

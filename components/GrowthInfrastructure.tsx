@@ -101,7 +101,7 @@ function GrowthInfrastructure() {
       <div className="max-w-7xl mx-auto px-6">
 
         {/* HEADER */}
-        <div className="max-w-4xl text-center mx-auto mb-24">
+        <div data-aos="fade-up" className="max-w-4xl text-center mx-auto mb-24">
           <p className="text-sm uppercase tracking-widest font-bold text-yellow-500 mb-4">
             Complete Systems
           </p>
@@ -115,7 +115,7 @@ function GrowthInfrastructure() {
         </div>
 
         {/* CAROUSEL */}
-        <div className="grid lg:grid-cols-2 gap-16 items-center relative">
+        <div data-aos="fade-up" className="grid lg:grid-cols-2 gap-16 items-center relative">
 
           {/* LEFT IMAGE */}
           <div className="relative">

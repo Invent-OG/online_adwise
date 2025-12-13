@@ -4,6 +4,7 @@ import "./globals.css";
 import { Header } from "@/components/ui/header-2";
 import { StickyFooter } from "@/components/ui/sticky-footer";
 import LenisProvider from "@/components/LenisProvider";
+import AOSInit from "@/components/AOSInit";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -31,6 +32,7 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         <LenisProvider>
+          <AOSInit />
           <Header />
           {children}
           <StickyFooter />

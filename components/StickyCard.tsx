@@ -213,7 +213,7 @@ export default function StickyCard() {
     <section ref={sectionRef} className="relative h-[500vh] ">
       <div className="sticky top-0 flex h-screen flex-col-reverse items-center justify-center gap-10 px-6 overflow-hidden lg:flex-row lg:gap-16">
         {/* Cards (Now Left) */}
-        <div className="relative h-[520px] w-[420px]">
+        <div data-aos="fade-right" className="relative h-[520px] w-[420px]">
           {cards.map((card, index) => (
             <div
               key={index}
@@ -260,7 +260,7 @@ export default function StickyCard() {
         </div>
 
         {/* Heading (Now Right) */}
-        <div className="max-w-md">
+        <div data-aos="fade-left" className="max-w-md">
           <h1 className="text-5xl font-extrabold leading-tight text-neutral-900">
             WHAT YOUR WEBSITE <br />
             <span className="text-neutral-400">TRULY NEEDS</span>

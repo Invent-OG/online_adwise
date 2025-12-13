@@ -15,7 +15,9 @@ const services = [
 
 export function ServiceMarquee() {
   return (
-    <section className="relative w-full overflow-hidden py-16">
+    <section
+    data-aos="fade-up"
+    className="relative w-full overflow-hidden py-16">
 
       <div className="flex">
         <motion.div

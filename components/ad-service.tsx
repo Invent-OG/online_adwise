@@ -456,7 +456,7 @@ export function AdService() {
     <section className="bg-white py-28">
       <div className="mx-auto max-w-7xl px-6">
         {/* HEADER */}
-        <div className="mb-20 text-center">
+        <div data-aos="fade-up" className="mb-20 text-center">
           <h2 className="text-4xl font-black sm:text-6xl">
             Platform-Wise <br /> <span className="text-neutral-600">Execution</span>
           </h2>
@@ -468,7 +468,7 @@ export function AdService() {
         <div className="flex flex-col gap-16 lg:flex-row">
           {/* LEFT NAV */}
           <aside className="hidden lg:block lg:w-1/3">
-            <div className="sticky top-28 space-y-4">
+            <div data-aos="fade-right" className="sticky top-28 space-y-4">
               {services.map((s) => (
                 <button
                   key={s.id}
@@ -487,7 +487,7 @@ export function AdService() {
           </aside>
 
           {/* RIGHT CONTENT (UNCHANGED + IMAGE ADDED) */}
-          <div className="lg:w-2/3 space-y-40">
+          <div data-aos="fade-down" className="lg:w-2/3 space-y-40">
             {services.map((service) => (
               <section key={service.id} id={service.id} className="scroll-mt-28">
                 {/* IMAGE */}

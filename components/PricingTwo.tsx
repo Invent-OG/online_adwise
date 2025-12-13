@@ -5,11 +5,11 @@ import { Zap, TrendingUp, Award, CheckCircle } from "lucide-react";
 
 export default function PricingTwo() {
   return (
-    <section className="w-full bg-white ">
+    <section className="w-full bg-white py-28">
       <div className="max-w-6xl mx-auto px-6">
 
         {/* HEADER */}
-        <div className="text-center mb-20">
+        <div data-aos="fade-up" className="text-center mb-20">
           <p className="text-yellow-500 uppercase tracking-widest text-xs font-semibold mb-4">
             Our Packages
           </p>
@@ -24,7 +24,7 @@ export default function PricingTwo() {
         </div>
 
         {/* CARDS */}
-        <div className="relative grid grid-cols-1 md:grid-cols-3 gap-8 items-center">
+        <div data-aos="fade-up" className="relative grid grid-cols-1 md:grid-cols-3 gap-8 items-center">
 
           {/* LEFT CARD */}
           <div className="rounded-3xl border border-neutral/10 bg-white p-8 shadow-sm">

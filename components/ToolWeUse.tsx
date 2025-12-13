@@ -44,7 +44,7 @@ function ToolWeUse() {
 
   return (
     <section className="max-w-5xl mx-auto bg-white py-28 overflow-hidden">
-      <div className="max-w-7xl text-center mx-auto px-6 mb-16">
+      <div data-aos="fade-up" className="max-w-7xl text-center mx-auto px-6 mb-16">
         {/* HEADER */}
         <p className="text-sm uppercase tracking-widest font-bold text-yellow-500 mb-4">
           Infrastructure Stack
@@ -60,7 +60,7 @@ function ToolWeUse() {
       </div>
 
       {/* MARQUEE */}
-      <div className="relative w-full overflow-hidden">
+      <div data-aos="fade-up" className="relative w-full overflow-hidden">
   <div ref={marqueeRef} className="flex w-max gap-6 items-center">
     {[...tools, ...tools].map((tool, index) => (
       <div
