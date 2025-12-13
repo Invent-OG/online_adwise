@@ -26,7 +26,7 @@ export const Card = forwardRef<HTMLDivElement, CardProps>(
     <div
       ref={ref}
       {...rest}
-      className={`absolute top-1/2 left-1/2 rounded-2xl
+      className={`absolute md:top-1/2 top-60 md:left-1/2 left-50 rounded-2xl
         border border-white/30
         bg-white/20
         backdrop-blur-xl

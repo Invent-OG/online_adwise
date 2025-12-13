@@ -41,15 +41,15 @@ export default function BeyondAds() {
   return (
     <section ref={sectionRef} className="bg-white">
       {/* INTRO */}
-      <div className="max-w-7xl mx-auto px-6 pt-32 pb-24">
+      <div className="max-w-7xl text-center mx-auto px-6 pt-32 pb-24">
         <p className="text-yellow-500 uppercase tracking-widest text-xs font-semibold mb-4">
           Beyond Ads
         </p>
-        <h2 className="text-4xl md:text-6xl font-bold text-neutral-950 max-w-4xl">
+        <h2 className="text-4xl md:text-6xl font-bold text-neutral-950">
           Growth Happens <br />
           <span className="text-neutral-600">In Layers</span>
         </h2>
-        <p className="mt-6 text-lg text-neutral-600 max-w-2xl">
+        <p className="mt-6 text-base max-w-sm mx-auto text-neutral-600 ">
           Each system builds on the previous one — revealed only when it matters.
         </p>
       </div>

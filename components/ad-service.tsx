@@ -456,11 +456,11 @@ export function AdService() {
     <section className="bg-white py-28">
       <div className="mx-auto max-w-7xl px-6">
         {/* HEADER */}
-        <div className="mb-20">
+        <div className="mb-20 text-center">
           <h2 className="text-4xl font-black sm:text-6xl">
-            Platform-Wise <span className="text-yellow-600">Execution</span>
+            Platform-Wise <br /> <span className="text-neutral-600">Execution</span>
           </h2>
-          <p className="mt-4 max-w-3xl text-lg text-neutral-600">
+          <p className="mt-4 max-w-sm mx-auto text-base text-neutral-600">
             Paid Media Execution • Funnel Scaling • Performance Marketing Strategy
           </p>
         </div>

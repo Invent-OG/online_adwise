@@ -6,6 +6,14 @@ import StickyCard from "@/components/StickyCard";
 import { AdService } from "@/components/ad-service";
 import BeyondAds from "@/components/BeyondAds";
 import VideoPacks from "@/components/VideoPacks";
+import Niches from "@/components/Niches";
+import Pricing from "@/components/Pricing";
+import NichesSpecialize from "@/components/NichesSpecialize";
+import GrowthInfrastructure from "@/components/GrowthInfrastructure";
+import ToolWeUse from "@/components/ToolWeUse";
+import PricingTwo from "@/components/PricingTwo";
+import CaseStudy from "@/components/CaseStudy";
+import WhyOnlineAdwise from "@/components/WhyOnlineAdwise";
 
 export default function Home() {
   return (
@@ -18,6 +26,14 @@ export default function Home() {
       <AdService />
       <BeyondAds />
       <VideoPacks />
+      <Niches/>
+      <Pricing/>
+      <NichesSpecialize/>
+      <GrowthInfrastructure/>
+      <ToolWeUse/>
+      <PricingTwo/>
+      <CaseStudy/>
+      <WhyOnlineAdwise/>
     </main>
   );
 }

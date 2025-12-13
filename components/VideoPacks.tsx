@@ -183,46 +183,110 @@ function VideoPacks() {
         <div className="relative h-[420px]">
           <CardSwap>
             {/* CARD 1 */}
-            <Card className="p-8">
-              <span className="text-yellow-400 font-bold">01</span>
-              <h3 className="text-xl font-semibold mt-4 mb-2">
-                Commercial Video
-              </h3>
-              <p className="text-black/80 text-sm">
-                High-impact animations designed to trigger immediate action.
-              </p>
-              <p className="text-black/60 text-sm mt-4">
-                Meta Ads, YouTube Ads, Landing Page Hero Sections
-              </p>
-            </Card>
+           <Card className="p-8 space-y-4">
+  <span className="text-yellow-400 font-bold">01</span>
+
+  <h3 className="text-xl font-semibold mt-4">
+    Commercial Video
+  </h3>
+
+  {/* EXISTING CONTENT (UNCHANGED) */}
+  <p className="text-black/80 text-sm leading-relaxed">
+    High-impact animations designed to trigger immediate action.
+  </p>
+
+  <p className="text-black/60 text-sm">
+    Meta Ads, YouTube Ads, Landing Page Hero Sections
+  </p>
+
+  {/* ADDED PROFESSIONAL CONTEXT */}
+  <p className="text-black/70 text-sm leading-relaxed">
+    Built to capture attention within the first few seconds, these
+    videos focus on clarity, speed, and visual hooks that stop the scroll
+    and communicate value instantly.
+  </p>
+
+  <ul className="space-y-2 text-black/70 text-sm">
+    <li>• Optimized for paid traffic performance</li>
+    <li>• Strong hooks, bold messaging, fast pacing</li>
+    <li>• Designed to drive clicks, leads, and conversions</li>
+  </ul>
+
+  
+</Card>
+
 
             {/* CARD 2 */}
-            <Card className="p-8">
-              <span className="text-yellow-400 font-bold">02</span>
-              <h3 className="text-xl font-semibold mt-4 mb-2">
-                Explainer Video
-              </h3>
-              <p className="text-black/80 text-sm">
-                Question-based, educational videos ideal for awareness.
-              </p>
-              <p className="text-black/60 text-sm mt-4">
-                YouTube SEO, Website trust-building, Top-of-funnel ads
-              </p>
-            </Card>
+            <Card className="p-8 space-y-4">
+  <span className="text-yellow-400 font-bold">02</span>
+
+  <h3 className="text-xl font-semibold mt-4">
+    Explainer Video
+  </h3>
+
+  {/* EXISTING CONTENT (UNCHANGED) */}
+  <p className="text-black/80 text-sm leading-relaxed">
+    Question-based, educational videos ideal for awareness.
+  </p>
+
+  <p className="text-black/60 text-sm">
+    YouTube SEO, Website trust-building, Top-of-funnel ads
+  </p>
+
+  {/* ADDED PROFESSIONAL CONTENT */}
+  <p className="text-black/70 text-sm leading-relaxed">
+    Designed to answer common buyer questions and simplify complex
+    services, these videos position your brand as a trusted authority
+    before the sales conversation begins.
+  </p>
+
+  <ul className="space-y-2 text-black/70 text-sm">
+    <li>• Educates cold audiences without selling</li>
+    <li>• Increases watch time and engagement</li>
+    <li>• Builds familiarity and brand confidence</li>
+  </ul>
+
+  
+</Card>
+
 
             {/* CARD 3 */}
-            <Card className="p-8">
-              <span className="text-yellow-400 font-bold">03</span>
-              <h3 className="text-xl font-semibold mt-4 mb-2">
-                Storytelling Video
-              </h3>
-              <p className="text-black/80 text-sm">
-                Emotion-driven brand story videos for deep connection.
-              </p>
-              <p className="text-black/60 text-sm mt-4">
-                Retargeting & credibility building
-              </p>
-            </Card>
+           <Card className="p-8 space-y-4">
+  <span className="text-yellow-400 font-bold">03</span>
+
+  <h3 className="text-xl font-semibold">
+    Storytelling Video
+  </h3>
+
+  <p className="text-black/80 text-sm leading-relaxed">
+    Emotion-driven brand story videos crafted to build trust, authority,
+    and long-term emotional connection with your audience.
+  </p>
+
+  <ul className="space-y-2 text-black/70 text-sm">
+    <li>• Ideal for retargeting & warm audiences</li>
+    <li>• Builds credibility & brand recall</li>
+    <li>• Converts attention into trust</li>
+  </ul>
+
+  <p className="text-black/60 text-sm">
+    Best used across retargeting ads, website about sections, and
+    credibility-focused funnels.
+  </p>
+
+  <div className="pt-2 flex flex-wrap gap-2">
+    <span className="px-3 py-1 text-xs rounded-full bg-yellow-400/20 text-yellow-700">
+      Retargeting
+    </span>
+    <span className="px-3 py-1 text-xs rounded-full bg-yellow-400/20 text-yellow-700">
+      Brand Trust
+    </span>
+    <span className="px-3 py-1 text-xs rounded-full bg-yellow-400/20 text-yellow-700">
+      Storytelling
+    </span>
+  </div>
+</Card>
+
           </CardSwap>
         </div>
       </div>
