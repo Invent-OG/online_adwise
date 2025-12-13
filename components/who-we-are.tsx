@@ -45,15 +45,14 @@ export function WhoWeAre() {
             className="lg:col-span-5 max-w-xl flex flex-col justify-center"
           >
             <div className="flex items-center gap-2 mb-6">
-              <span className="h-px w-8 bg-neutral-400"></span>
-              <p className="text-sm font-bold uppercase tracking-widest text-neutral-500">
+              <p className="text-[#DFB025] text-center uppercase tracking-widest text-xs font-bold mb-4">
                 Who We Are
               </p>
             </div>
 
-            <h2 className="text-4xl font-extrabold tracking-tight text-white sm:text-5xl leading-[1.1]">
+            <h2 className="text-4xl md:text-6xl font-extrabold tracking-tight text-white leading-[1.1]">
               Growth Isn’t Random. <br />
-              <span className="text-neutral-500">It’s Architected.</span>
+              <span className="text-[#DFB025]">It’s Architected.</span>
             </h2>
 
             <p className="mt-8 text-lg leading-relaxed text-neutral-400">

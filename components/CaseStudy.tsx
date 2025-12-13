@@ -98,14 +98,14 @@ export default function CaseStudy() {
           className="text-center mb-20 animate-fade-in-up"
         >
           <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full mb-6">
-            <span className="text-xs font-bold tracking-widest text-yellow-600 uppercase">
+            <span className="text-xs font-bold tracking-widest text-[#DFB025] uppercase">
               Case Study
             </span>
           </div>
-          <h2 className="text-4xl md:text-6xl font-bold text-white mb-4 tracking-tight">
-            HVAC Growth <span className="text-neutral-500">Partner</span>
+          <h2 className="text-4xl md:text-6xl font-extrabold text-white mb-4 tracking-tight">
+            HVAC  <span className="text-[#DFB025]">Growth Partner</span>
           </h2>
-          <p className="text-xl text-neutral-400 max-w-2xl mx-auto font-light">
+          <p className="text-base text-neutral-400 max-w-sm mx-auto font-light">
             How we transformed a local HVAC business from zero online presence
             to a market leader in 42 days.
           </p>
@@ -143,11 +143,11 @@ export default function CaseStudy() {
           <div className="lg:col-span-8">
             <div className="grid sm:grid-cols-2 gap-6 h-full">
               {/* Result Card 1 */}
-              <div className="p-8 rounded-[32px] bg-gradient-to-br from-yellow-600 to-yellow-700 text-white shadow-xl shadow-yellow-900/20 relative overflow-hidden group">
+              <div className="p-8 rounded-[32px] bg-[#DFB025] text-white shadow-xl shadow-yellow-900/20 relative overflow-hidden group">
                 <div className="absolute top-0 right-0 w-32 h-32 bg-white/10 rounded-full blur-2xl -mr-10 -mt-10 group-hover:scale-150 transition-transform duration-700" />
-                <CalendarCheck className="w-10 h-10 mb-4 text-yellow-200" />
+                <CalendarCheck className="w-10 h-10 mb-4 text-[#DFB025]-200" />
                 <div className="text-5xl font-bold mb-2 tracking-tight">74</div>
-                <div className="text-yellow-100 font-medium">
+                <div className="text-[#DFB025]-100 font-medium">
                   Booked Appointments
                 </div>
                 <div className="mt-4 inline-flex items-center gap-1 text-xs bg-white/20 px-3 py-1 rounded-full">
@@ -187,14 +187,14 @@ export default function CaseStudy() {
               {/* Result Card 4 */}
               <div className="p-8 rounded-[32px] bg-black text-white shadow-xl relative overflow-hidden border border-white/10">
                 <div className="absolute inset-0 bg-grid-white/[0.05] bg-[length:20px_20px]" />
-                <UserCheck className="w-10 h-10 mb-4 text-yellow-600 relative z-10" />
+                <UserCheck className="w-10 h-10 mb-4 text-[#DFB025]-600 relative z-10" />
                 <div className="text-3xl font-bold mb-2 relative z-10">
                   Full-Time
                 </div>
                 <div className="text-neutral-400 font-medium relative z-10">
                   Growth Partner
                 </div>
-                <div className="absolute bottom-6 right-6 p-2 bg-yellow-600 rounded-full">
+                <div className="absolute bottom-6 right-6 p-2 bg-[#DFB025] rounded-full">
                   <ArrowRight size={20} />
                 </div>
               </div>
@@ -222,7 +222,7 @@ export default function CaseStudy() {
             {/* The Fill Line */}
             <div
               ref={lineRef}
-              className="h-full bg-gradient-to-r from-yellow-200 to-yellow-600 origin-left"
+              className="h-full bg-gradient-to-r from-[#DFB025] to-[#DFB025] origin-left"
             />
           </div>
 
@@ -253,12 +253,12 @@ export default function CaseStudy() {
                         {step.id}
                       </span>
                       <Icon
-                        className="w-6 h-6 md:w-8 md:h-8 text-yellow-600"
+                        className="w-6 h-6 md:w-8 md:h-8 text-[#DFB025]"
                         strokeWidth={1.5}
                       />
                     </div>
 
-                    <h4 className="text-lg font-bold text-white mb-1 group-hover:text-yellow-600 transition-colors">
+                    <h4 className="text-lg font-bold text-white mb-1 group-hover:text-[#DFB025] transition-colors">
                       {step.title}
                     </h4>
                     <p className="text-sm text-neutral-400 font-medium leading-relaxed">

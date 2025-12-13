@@ -1,13 +1,15 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Work_Sans } from "next/font/google";
 import "./globals.css";
 import { Header } from "@/components/ui/header-2";
 import { StickyFooter } from "@/components/ui/sticky-footer";
 import LenisProvider from "@/components/LenisProvider";
 import AOSInit from "@/components/AOSInit";
+import { WhatsAppButton } from "@/components/WhatsAppButton";
+import TrackingScript from "@/components/TrackingScript";
 
-const inter = Inter({
-  variable: "--font-inter",
+const workSans = Work_Sans({
+  variable: "--font-work-sans",
   subsets: ["latin"],
 });
 
@@ -23,12 +25,14 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${inter.variable} antialiased overscroll-none`}>
+      <body className={`${workSans.variable} antialiased overscroll-none`}>
         <LenisProvider>
           <AOSInit />
+          <TrackingScript />
           <Header />
           {children}
           <StickyFooter />
+          <WhatsAppButton />
         </LenisProvider>
       </body>
     </html>

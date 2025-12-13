@@ -9,12 +9,12 @@ function WhyOnlineAdwise() {
       <div className="max-w-6xl mx-auto px-6">
         {/* HEADER */}
         <div data-aos="fade-up" className="text-center mb-20">
-          <p className="text-xs uppercase tracking-widest font-semibold text-yellow-600 mb-4">
+          <p className="text-xs uppercase tracking-widest font-semibold text-[#DFB025] mb-4">
             The Difference
           </p>
 
-          <h2 className="text-4xl md:text-6xl font-bold text-white mb-6">
-            Why Online <br /> <span className="text-neutral-500">Adwise</span>{" "}
+          <h2 className="text-4xl md:text-6xl font-extrabold text-white mb-6">
+            Why  <span className="text-[#DFB025]">Online <br /> Adwise</span>{" "}
             Works
           </h2>
 
@@ -43,7 +43,6 @@ function WhyOnlineAdwise() {
               title: "Media",
               desc: "Ads + videos + funnels",
               icon: Monitor,
-              highlight: true,
             },
             {
               title: "Mechanism",
@@ -55,11 +54,15 @@ function WhyOnlineAdwise() {
             return (
               <div
                 key={i}
-                className={`rounded-3xl border p-8 text-center transition ${
-                  item.highlight
-                    ? "border-yellow-600 shadow-lg shadow-yellow-900/10 bg-neutral-900"
-                    : "border-white/10 bg-neutral-900/50"
-                }`}
+                className="
+                  rounded-3xl border border-white/10
+                  bg-neutral-900/70
+                  p-8 text-center
+                  transition-all duration-300
+                  hover:-translate-y-1
+                  hover:border-[#DFB025]/40
+                  hover:shadow-[0_25px_80px_rgba(223,176,37,0.28)]
+                "
               >
                 <div className="w-14 h-14 mx-auto mb-6 rounded-2xl bg-black border border-white/10 flex items-center justify-center">
                   <Icon className="w-7 h-7 text-white" />
@@ -75,14 +78,13 @@ function WhyOnlineAdwise() {
           })}
         </div>
 
-        {/* COMPARISON – NEW STYLE */}
+        {/* COMPARISON */}
         <div
           data-aos="fade-right"
           className="grid grid-cols-1 lg:grid-cols-2 gap-8"
         >
-          {/* NO MORE CARD */}
-          <div className="relative rounded-3xl border border-white/10 bg-neutral-900 p-8 overflow-hidden">
-            {/* Accent */}
+          {/* NO MORE */}
+          <div className="relative rounded-3xl border border-white/10 bg-neutral-900 p-8 overflow-hidden transition hover:shadow-[0_20px_60px_rgba(0,0,0,0.6)]">
             <div className="absolute top-0 left-0 h-full w-1 bg-red-500/70" />
 
             <p className="text-sm font-semibold text-white mb-6">No more:</p>
@@ -104,16 +106,15 @@ function WhyOnlineAdwise() {
             </ul>
           </div>
 
-          {/* JUST CARD */}
-          <div className="relative rounded-3xl border border-yellow-600/30 bg-neutral-900 p-8 overflow-hidden shadow-lg">
-            {/* Accent */}
-            <div className="absolute top-0 left-0 h-full w-1 bg-yellow-600" />
+          {/* JUST */}
+          <div className="relative rounded-3xl border border-[#DFB025]/30 bg-neutral-900 p-8 overflow-hidden transition hover:shadow-[0_25px_80px_rgba(223,176,37,0.35)]">
+            <div className="absolute top-0 left-0 h-full w-1 bg-[#DFB025]" />
 
             <p className="text-sm font-semibold text-white mb-6">Just:</p>
 
             <div className="flex items-start gap-4">
-              <span className="w-8 h-8 rounded-full bg-yellow-600 flex items-center justify-center shrink-0">
-                <Check className="w-4 h-4 text-white" />
+              <span className="w-8 h-8 rounded-full bg-[#DFB025] flex items-center justify-center shrink-0">
+                <Check className="w-4 h-4 text-black" />
               </span>
 
               <p className="text-sm text-neutral-400 leading-relaxed">

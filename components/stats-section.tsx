@@ -102,10 +102,13 @@ export function StatsSection({ reverse = false }: { reverse?: boolean }) {
   return (
     <section className="w-full bg-black py-28">
       <div data-aos="fade-up" className="mx-auto max-w-7xl px-6 lg:px-8">
+        <p className="text-[#DFB025] text-center uppercase tracking-widest text-xs font-bold mb-4">
+          Stats
+        </p>
         {/* HEADER */}
         <div className="mb-20 text-center">
-          <h2 className="text-4xl font-extrabold text-white sm:text-5xl">
-            Proven Global Impact
+          <h2 className="text-4xl md:text-6xl font-extrabold text-white">
+            Proven <span className="text-[#DFB025]">Global </span>Impact
           </h2>
           <p className="mt-4 mx-auto max-w-xl text-neutral-400">
             Delivering consistent results across industries worldwide

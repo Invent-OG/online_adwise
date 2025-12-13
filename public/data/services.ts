@@ -1,6 +1,6 @@
 export const serviceSuite = [
   {
-    id: 6,
+    id: 1,
     slug: "content-writing",
     title: "Content Writing Services",
     tagline: "Complete Copy Suite",
@@ -31,7 +31,7 @@ export const serviceSuite = [
   },
 
   {
-    id: 7,
+    id: 2,
     slug: "website-design-development",
     title: "Website Design & Development",
     tagline: "Execute Funnels + Navigation Psychology",
@@ -58,7 +58,7 @@ export const serviceSuite = [
   },
 
   {
-    id: 8,
+    id: 3,
     slug: "funnel-design-optimization",
     title: "Funnel Design & Optimization",
     tagline: "Execute + Retarget + Nurture",
@@ -85,7 +85,7 @@ export const serviceSuite = [
   },
 
   {
-    id: 9,
+    id: 4,
     slug: "tracking-analytics",
     title: "Tracking & Analytics Setup",
     tagline: "Full Stack Implementation",
@@ -113,7 +113,7 @@ export const serviceSuite = [
   },
 
   {
-    id: 10,
+    id: 5,
     slug: "automation-crm",
     title: "Automation & CRM Setup",
     tagline: "GHL, Zapier, Make, n8n",
@@ -135,7 +135,7 @@ export const serviceSuite = [
   },
 
   {
-    id: 11,
+    id: 6,
     slug: "whiteboard-explainer",
     title: "Whiteboard Video Explainer",
     tagline: "Store Item",

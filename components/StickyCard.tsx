@@ -1,109 +1,17 @@
-// "use client";
-
-// import React, { useEffect, useRef } from "react";
-// import gsap from "gsap";
-// import { ScrollTrigger } from "gsap/ScrollTrigger";
-
-// gsap.registerPlugin(ScrollTrigger);
-
-// const cards = [
-//   {
-//     title: "Better User Acquisition",
-//     desc: "Turn visitors into loyal users with smart UX and strategy.",
-//   },
-//   {
-//     title: "Responsive Design",
-//     desc: "Perfect layouts across mobile, tablet and desktop.",
-//   },
-//   {
-//     title: "High Performance",
-//     desc: "Fast loading experiences that users love.",
-//   },
-//   {
-//     title: "Data Driven Decisions",
-//     desc: "Analytics-based improvements that actually convert.",
-//   },
-//   {
-//     title: "Conversion Focused",
-//     desc: "Every pixel guides users to take action.",
-//   },
-// ];
-
-// export default function StickyCard() {
-//   const sectionRef = useRef<HTMLDivElement>(null);
-//   const cardsRef = useRef<HTMLDivElement[]>([]);
-
-//   useEffect(() => {
-//     if (!sectionRef.current) return;
-
-//     const ctx = gsap.context(() => {
-//       cardsRef.current.forEach((card, index) => {
-//         gsap.fromTo(
-//           card,
-//           {
-//             y: 0,
-//             opacity: 1,
-//             scale: 1,
-//           },
-//           {
-//             y: "-120vh", // 👈 moves fully to top and out
-//             opacity: 0,
-//             scale: 0.95,
-//             ease: "none",
-//             scrollTrigger: {
-//               trigger: sectionRef.current,
-//               start: `${index * 20}% top`,
-//               end: `${index * 20 + 20}% top`,
-//               scrub: true,
-//             },
-//           }
-//         );
-//       });
-//     }, sectionRef);
-
-//     return () => ctx.revert();
-//   }, []);
-
-//   return (
-//     <section
-//       ref={sectionRef}
-//       className="relative h-[500vh]"
-//     >
-//       <div className="sticky top-0 flex h-screen items-center justify-center overflow-hidden">
-//         <div className="relative h-[420px] w-[360px]">
-//           {cards.map((card, index) => (
-//             <div
-//               key={index}
-//               ref={(el) => {
-//                 if (el) cardsRef.current[index] = el;
-//               }}
-//               className="absolute bg-gradient-to-br from-orange-100 via-orange-400 to-orange-100 inset-0 flex flex-col  items-center justify-center rounded-3xl bg-white p-8 shadow-2xl"
-//               style={{ zIndex: cards.length - index }}
-//             >
-//               <h3 className="mb-4 text-center md:text-3xl text-2xl font-extrabold text-white">
-//                 {card.title}
-//               </h3>
-//               <p className="text-center text-white font-bold">
-//                 {card.desc}
-//               </p>
-//             </div>
-//           ))}
-//         </div>
-//       </div>
-//     </section>
-//   );
-// }
 "use client";
 
-import React, { useEffect, useRef } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 gsap.registerPlugin(ScrollTrigger);
 
+const puzzleLetters = ["N", "A", "R", "E", "N"];
+
 const cards = [
   {
     step: "Navigate",
+    letter: "N",
     title: "Strategic Clarity",
     desc: "Before touching ads, we study your industry, customer psychology, funnel gaps, and data accuracy.",
     points: [
@@ -118,6 +26,7 @@ const cards = [
   },
   {
     step: "Attract",
+    letter: "A",
     title: "Creative + Ads System",
     desc: "We craft attention-pulling assets using proven persuasion triggers and deploy across all major platforms.",
     points: [
@@ -131,6 +40,7 @@ const cards = [
   },
   {
     step: "Refine",
+    letter: "R",
     title: "Fix + Improve",
     desc: "Behavior analysis + funnel forensics to optimize every touchpoint in your customer journey.",
     points: [
@@ -145,6 +55,7 @@ const cards = [
   },
   {
     step: "Expand",
+    letter: "E",
     title: "Scale Without Wasting Money",
     desc: "We scale psychologically and structurally for sustainable growth with predictable ROI.",
     points: [
@@ -158,6 +69,7 @@ const cards = [
   },
   {
     step: "Normalize",
+    letter: "N",
     title: "Predictable System",
     desc: "Your business now runs on a system — not luck. Marketing becomes stable and reliable.",
     points: [
@@ -174,12 +86,21 @@ const cards = [
 export default function StickyCard() {
   const sectionRef = useRef<HTMLDivElement>(null);
   const cardsRef = useRef<HTMLDivElement[]>([]);
+  const [activeIndex, setActiveIndex] = useState(0);
 
   useEffect(() => {
     if (!sectionRef.current) return;
 
     const ctx = gsap.context(() => {
       cardsRef.current.forEach((card, index) => {
+        ScrollTrigger.create({
+          trigger: sectionRef.current,
+          start: `${index * 20}% top`,
+          end: `${index * 20 + 20}% top`,
+          onEnter: () => setActiveIndex(index),
+          onEnterBack: () => setActiveIndex(index),
+        });
+
         gsap.fromTo(
           card,
           { y: 0, opacity: 1, scale: 1 },
@@ -203,61 +124,97 @@ export default function StickyCard() {
   }, []);
 
   return (
-    <section ref={sectionRef} className="relative h-[500vh] ">
-      <div className="sticky top-0 flex h-screen flex-col-reverse items-center justify-center gap-10 px-6 overflow-hidden lg:flex-row lg:gap-16">
-        {/* Cards (Now Left) */}
-        <div data-aos="fade-right" className="relative h-[520px] w-[420px]">
-          {cards.map((card, index) => (
-            <div
-              key={index}
-              ref={(el) => {
-                if (el) cardsRef.current[index] = el;
-              }}
-              style={{ zIndex: cards.length - index }}
-              className="absolute inset-0 flex flex-col justify-between rounded-3xl border border-white/10 bg-neutral-900 p-8 shadow-xl transition-shadow duration-300 hover:shadow-2xl hover:shadow-yellow-600/10 bg-[linear-gradient(to_right,#ffffff05_1px,transparent_1px),linear-gradient(to_bottom,#ffffff05_1px,transparent_1px)] bg-[size:24px_24px]"
-            >
-              <div>
-                {/* Step */}
-                <p className="mb-2 text-xs font-bold uppercase tracking-widest text-yellow-600">
-                  {card.step}
-                </p>
+    <section ref={sectionRef} className="relative h-[500vh] bg-black">
+      <p className="text-[#DFB025] text-center uppercase tracking-widest text-xs font-bold mb-4">
+Our Signature Framework              </p>
+      <div className="sticky top-0 h-screen grid grid-cols-1 lg:grid-cols-2 gap-16 px-6 max-w-7xl mx-auto items-center">
+        
 
-                {/* Title */}
-                <h3 className="mb-4 text-3xl font-extrabold text-white">
-                  {card.title}
-                </h3>
+        {/* LEFT — STICKY CARDS */}
+        <div className="flex justify-center">
+          <div className="relative h-[520px] w-[420px]">
+            {cards.map((card, index) => (
+              <div
+                key={index}
+                ref={(el) => {
+                  if (el) cardsRef.current[index] = el;
+                }}
+                style={{ zIndex: cards.length - index }}
+                className="absolute inset-0 flex flex-col justify-between rounded-3xl
+                border border-white/10 bg-neutral-900 p-8 shadow-xl
+                bg-[linear-gradient(to_right,#ffffff05_1px,transparent_1px),linear-gradient(to_bottom,#ffffff05_1px,transparent_1px)]
+                bg-[size:24px_24px]"
+              >
+                <div>
+                  <div className="flex items-start gap-4 mb-6">
+                    <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-[#2563EB] text-white text-xl font-extrabold">
+                      {card.letter}
+                    </div>
+                    <div>
+                      <h3 className="text-lg font-bold text-white">
+                        {card.step}
+                      </h3>
+                      <p className="text-sm font-semibold text-[#DFB025]">
+                        {card.title}
+                      </p>
+                    </div>
+                  </div>
 
-                {/* Description */}
-                <p className="mb-6 text-neutral-400 leading-relaxed">
-                  {card.desc}
-                </p>
+                  <p className="mb-6 text-neutral-400 leading-relaxed">
+                    {card.desc}
+                  </p>
 
-                {/* Bullet points */}
-                <ul className="mb-6 space-y-3 text-sm text-neutral-300">
-                  {card.points.map((point, i) => (
-                    <li key={i} className="flex items-start gap-3">
-                      <span className="mt-1.5 h-2 w-2 shrink-0 rounded-full bg-yellow-600" />
-                      <span>{point}</span>
-                    </li>
-                  ))}
-                </ul>
+                  <ul className="mb-6 space-y-3 text-sm text-neutral-300">
+                    {card.points.map((point, i) => (
+                      <li key={i} className="flex items-start gap-3">
+                        <span className="mt-1.5 h-2 w-2 rounded-full bg-[#DFB025]" />
+                        <span>{point}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+
+                <div className="rounded-xl border border-[#DFB025]/30 bg-[#DFB025]/10 p-4 text-sm font-medium text-[#DFB025]">
+                  <span className="mr-2">📌</span>
+                  <strong>Outcome:</strong> {card.outcome}
+                </div>
               </div>
-
-              {/* Outcome */}
-              <div className="rounded-xl border border-yellow-600/20 bg-yellow-600/10 p-4 text-sm font-medium text-yellow-500">
-                <span className="mr-2">📌</span>
-                <strong>Outcome:</strong> {card.outcome}
-              </div>
-            </div>
-          ))}
+            ))}
+          </div>
         </div>
 
-        {/* Heading (Now Right) */}
-        <div data-aos="fade-left" className="max-w-md">
-          <h1 className="text-5xl font-extrabold leading-tight text-white">
-            WHAT YOUR WEBSITE <br />
-            <span className="text-neutral-500">TRULY NEEDS</span>
-          </h1>
+        {/* RIGHT — FRAMEWORK + LETTERS */}
+        <div className="max-w-xl">
+          <h2 className="text-4xl md:text-6xl font-extrabold text-white mb-6">
+            THE <span className="text-[#DFB025]">NAREN METHOD™</span>
+          </h2>
+
+          <p className="text-neutral-400 text-lg leading-relaxed mb-10">
+            A 5-stage behavioral + performance system that ensures consistent,
+            sustainable, high-quality leads — not just inconsistent spikes.
+          </p>
+
+          {/* 🔥 NEW LETTER DESIGN (DFB025 ONLY) */}
+          <div className="flex gap-3">
+            {puzzleLetters.map((letter, index) => (
+              <div
+                key={index}
+                className={`relative h-14 w-14 rounded-full flex items-center justify-center
+                text-lg font-extrabold transition-all duration-300
+                ${
+                  activeIndex === index
+                    ? "bg-[#DFB025] text-black shadow-[0_0_28px_rgba(223,176,37,0.45)]"
+                    : "bg-neutral-900 text-neutral-600 border border-neutral-800"
+                }`}
+              >
+                {letter}
+
+                {activeIndex === index && (
+                  <span className="absolute inset-0 rounded-full ring-2 ring-[#DFB025]/60" />
+                )}
+              </div>
+            ))}
+          </div>
         </div>
       </div>
     </section>

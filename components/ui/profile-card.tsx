@@ -27,7 +27,7 @@ export function ProfileCard() {
           <h1>The NAREN Method™</h1>
 
           {/* Role */}
-          <h2 >Growth Architecture</h2>
+          <h2 className=" text-[#ffffff]" >Growth Architecture</h2>
         </header>
 
         {/* Features List */}
@@ -35,8 +35,8 @@ export function ProfileCard() {
           <div className="grid grid-cols-1 gap-6 text-left">
             {features.map((feature, index) => (
               <div key={index} className="flex items-center gap-2">
-                <feature.icon size={16} className="text-yellow-600" />
-                <span className="text-xs font-bold text-neutral-700">{feature.name}</span>
+                <feature.icon size={16} className="text-[#DFB025]" />
+                <span className="text-xs font-bold text-[#ffffff]">{feature.name}</span>
               </div>
             ))}
           </div>

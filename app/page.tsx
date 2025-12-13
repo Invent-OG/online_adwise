@@ -14,6 +14,7 @@ import ToolWeUse from "@/components/ToolWeUse";
 import PricingTwo from "@/components/PricingTwo";
 import CaseStudy from "@/components/CaseStudy";
 import WhyOnlineAdwise from "@/components/WhyOnlineAdwise";
+import ContactForm from "@/components/ContactForm";
 
 export default function Home() {
   return (
@@ -34,6 +35,7 @@ export default function Home() {
       <PricingTwo/>
       <CaseStudy/>
       <WhyOnlineAdwise/>
+      <ContactForm/>
     </main>
   );
 }

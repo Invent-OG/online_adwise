@@ -35,7 +35,6 @@
 .header {
   width: 100%;
   padding: 40px 20px 20px 20px;
-  background: #FFFFFF;
   color: #414241;
   text-align: center;
   display: flex;
@@ -52,23 +51,23 @@
 }
 
 .header h1 {
-  color: #ca8a04;
-  font-weight: 500;
+  color: #DFB025;
+  font-weight: 800;
   margin: 0px 0px 5px 0px;
   font-size: 24px;
+
 }
 
 .header h2 {
   font-weight: 500;
   margin: 0px 0px 5px 0px;
-  font-size: 16px;
+  font-size: 20px;
 }
 
 .profileBio {
   width: 100%;
   padding: 0 40px 20px 60px;
-  background: #FFFFFF;
-  color: #333333;
+  color: #ffffff;
   text-align: left;
   opacity: 0;
 }
@@ -83,14 +82,14 @@
 
 .footer p {
   font-size: 13px;
-  color: #666;
+  color: #ffffff;
   margin-bottom: 20px;
   line-height: 1.5;
 }
 
 .ctaButton {
-  background: #ca8a04;
-  color: white;
+  background: #DFB025;
+  color: ffffff;
   border: none;
   padding: 10px 24px;
   border-radius: 30px;
@@ -127,7 +126,7 @@
 }
 
 @keyframes moveUp {
-  0% { background: #ca8a04; top: 100%; }
+  0% { background: #DFB025; top: 100%; }
   50% { top: 40%; }
   100% { top: 50%; background: #E0E0E0; }
 }
@@ -135,7 +134,7 @@
 @keyframes materia {
   0% { background: #E0E0E0; }
   50% { border-radius: 4px; }
-  100% { width: 320px; height: 480px; background: #FFFFFF; border-radius: 16px; }
+  100% { width: 320px; height: 480px; background: #424242; border-radius: 16px; }
 }
 
 @keyframes moveIn {

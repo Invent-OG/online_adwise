@@ -124,14 +124,17 @@ const niches: NicheItem[] = [
 export default function NichesSpecialize() {
   return (
     <section className="w-full py-24 overflow-hidden relative bg-black">
+       <p className="text-[#DFB025] text-center uppercase tracking-widest text-xs font-semibold mb-4">
+            Video Package Store
+          </p>
       {/* Header */}
       <div
         data-aos="fade-up"
         className="max-w-7xl mx-auto px-6 mb-16 text-center"
       >
-        <h2 className="text-4xl md:text-6xl font-bold text-white mb-4">
-          Niches We <br />{" "}
-          <span className="text-neutral-500">Specialize In</span>
+        <h2 className="text-4xl md:text-6xl font-extrabold text-white mb-4">
+          Niches We <br />
+          <span className="text-[#DFB025]">Specialize </span>In
         </h2>
         <p className="text-base text-neutral-400">
           Data-driven growth across premium industries.
@@ -165,6 +168,7 @@ function MarqueeCard({ item }: { item: NicheItem }) {
 
   return (
     <div className="w-[260px] shrink-0 group rounded-[26px] overflow-hidden bg-white/5 backdrop-blur-xl border border-white/10 shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-2">
+      
       {/* Image */}
       <div className="h-40 relative overflow-hidden">
         <img
@@ -181,12 +185,12 @@ function MarqueeCard({ item }: { item: NicheItem }) {
 
       {/* Content */}
       <div className="p-5">
-        <h3 className="text-lg font-bold text-white mb-2 group-hover:text-yellow-600 transition-colors">
+        <h3 className="text-lg font-bold text-white mb-2 group-hover:text-[#DFB025] transition-colors">
           {item.name}
         </h3>
         <p className="text-sm text-neutral-400 mb-4">{item.description}</p>
 
-        <div className="flex items-center text-yellow-600 font-semibold text-sm">
+        <div className="flex items-center text-[#DFB025] font-semibold text-sm">
           Explore Niche
           <ArrowUpRight className="w-4 h-4 ml-2 transition-transform group-hover:translate-x-1 group-hover:-translate-y-1" />
         </div>

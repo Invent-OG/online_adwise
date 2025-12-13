@@ -115,14 +115,14 @@ function Niches() {
       <div data-aos="fade-up" className="max-w-6xl mx-auto px-6 relative z-10">
         {/* HEADER - Modern design */}
         <div ref={headerRef} className="max-w-4xl mx-auto text-center mb-20">
-          <p className="text-yellow-600 uppercase tracking-widest mb-4 text-xs font-semibold">
-            20+ Local Business Niches
+           <p className="text-[#DFB025] uppercase tracking-widest text-xs font-semibold mb-4">
+            Video Package Store
           </p>
 
           <h2 className="text-5xl md:text-7xl font-bold text-white mb-8">
             <span className="block">Built for Proven</span>
             <span className="relative inline-block">
-              <span className="text-neutral-500">Industries</span>
+              <span className="text-[#DFB025]">Industries</span>
             </span>
           </h2>
 

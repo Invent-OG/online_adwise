@@ -49,10 +49,10 @@ function ToolWeUse() {
         className="max-w-7xl text-center mx-auto px-6 mb-16"
       >
         {/* HEADER */}
-        <p className="text-sm uppercase tracking-widest font-bold text-yellow-600 mb-4">
+        <p className="text-sm uppercase tracking-widest font-bold text-[#DFB025] mb-4">
           Infrastructure Stack
         </p>
-        <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
+        <h2 className="text-4xl md:text-6xl font-extrabold text-white mb-4">
           Tools We Use
         </h2>
         <p className="max-w-sm mx-auto text-neutral-400 text-base md:text-base">
@@ -68,16 +68,16 @@ function ToolWeUse() {
             <div
               key={index}
               className="
-          flex items-center gap-3 px-6 py-3
-          rounded-full
-          bg-neutral-900 backdrop-blur-md
-          border border-white/10
-          shadow-md
-          text-sm font-semibold text-white
-          whitespace-nowrap
-        "
+                flex items-center gap-3 px-6 py-3
+                rounded-full
+                bg-neutral-900 backdrop-blur-md
+                border border-white/10
+                shadow-md
+                text-sm font-semibold text-white
+                whitespace-nowrap
+              "
             >
-              <Check className="w-4 h-4 text-yellow-500" />
+              <Check className="w-4 h-4 text-[#DFB025]" />
               {tool}
             </div>
           ))}

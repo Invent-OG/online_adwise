@@ -3,94 +3,166 @@
 import React from "react";
 import { cn } from "@/lib/utils";
 import { motion, useReducedMotion } from "motion/react";
-import {
-  FacebookIcon,
-  FrameIcon,
-  InstagramIcon,
-  LinkedinIcon,
-  YoutubeIcon,
-} from "lucide-react";
-import { Button } from "./button";
-
-interface FooterLink {
-  title: string;
-  href: string;
-  icon?: React.ComponentType<{ className?: string }>;
-}
-interface FooterLinkGroup {
-  label: string;
-  links: FooterLink[];
-}
+import { Mail, Phone, Globe, ArrowUpRight } from "lucide-react";
 
 type StickyFooterProps = React.ComponentProps<"footer">;
 
 export function StickyFooter({ className, ...props }: StickyFooterProps) {
   return (
     <footer
-      className={cn("relative h-[720px] w-full", className)}
-      style={{ clipPath: "polygon(0% 0, 100% 0%, 100% 100%, 0 100%)" }}
+      className={cn("relative h-[500px] w-full", className)}
+      style={{ clipPath: "polygon(0 0,100% 0,100% 100%,0 100%)" }}
       {...props}
     >
-      <div className="fixed bottom-0 h-[720px] w-full bg-black">
-        <div className="sticky top-[calc(100vh-720px)] h-full overflow-y-auto">
-          <div className="relative flex size-full flex-col justify-between gap-5 border-t px-4 py-8 md:px-12">
+      <div className="fixed bottom-0 h-[500px] w-full bg-black">
+        <div className="sticky top-[calc(100vh-500px)] h-full">
+          <div className="relative h-full border-t border-white/10 px-8 md:px-14 py-12">
+            
+            {/* SUBTLE ACCENT */}
             <div
               aria-hidden
-              className="absolute inset-0 isolate z-0 contain-strict"
+              className="absolute inset-0 pointer-events-none"
             >
-              <div className="bg-[radial-gradient(68.54%_68.72%_at_55.02%_31.46%,rgba(255,255,255,0.03)_0,rgba(255,255,255,0.01)_50%,transparent_80%)] absolute top-0 left-0 h-320 w-140 -translate-y-87.5 -rotate-45 rounded-full" />
-              <div className="bg-[radial-gradient(50%_50%_at_50%_50%,rgba(255,255,255,0.02)_0,rgba(255,255,255,0.01)_80%,transparent_100%)] absolute top-0 left-0 h-320 w-60 [translate:5%_-50%] -rotate-45 rounded-full" />
-              <div className="bg-[radial-gradient(50%_50%_at_50%_50%,rgba(255,255,255,0.02)_0,rgba(255,255,255,0.01)_80%,transparent_100%)] absolute top-0 left-0 h-320 w-60 -translate-y-87.5 -rotate-45 rounded-full" />
+              <div className="absolute left-1/2 top-0 h-[360px] w-[360px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-[radial-gradient(circle,rgba(223,176,37,0.10),transparent_70%)]" />
             </div>
-            <div className="mt-10 flex flex-col gap-8 md:flex-row xl:mt-0">
-              <AnimatedContainer className="w-full max-w-sm min-w-2xs space-y-4">
-                <FrameIcon className="size-8 text-yellow-600" />
-                <p className="text-neutral-400 mt-8 text-sm md:mt-0">
-                  Innovative fintech empowering businesses with seamless
-                  payments, lending, and financial infrastructure worldwide.
-                </p>
-                <div className="flex gap-2">
-                  {socialLinks.map((link) => (
-                    <Button
-                      key={link.title}
-                      size="icon"
-                      variant="outline"
-                      className="size-8"
-                    >
-                      <link.icon className="size-4" />
-                    </Button>
-                  ))}
+
+            {/* MAIN CONTENT */}
+            <div className="relative z-10 max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-12 gap-10">
+
+              {/* COL 1: BRAND (Span 3) */}
+              <AnimatedContainer className="md:col-span-3">
+                <div className="space-y-6 max-w-sm">
+                  <div className="flex items-center gap-4">
+                    <div className="h-11 w-11 rounded-xl bg-[#DFB025] flex items-center justify-center shadow-[0_8px_28px_rgba(223,176,37,0.35)]">
+                      <ArrowUpRight className="w-5 h-5 text-black" />
+                    </div>
+                    <div>
+                      <h3 className="text-lg font-semibold text-white">
+                        Online Adwise
+                      </h3>
+                      <p className="text-[11px] tracking-widest text-neutral-500">
+                        POWERED BY NAREN METHOD™
+                      </p>
+                    </div>
+                  </div>
+
+                  <p className="text-sm text-neutral-400 leading-relaxed">
+                    Growth & Paid Ads Consultation powered by
+                    <br />
+                    The <span className="text-white">NAREN Method™</span>
+                  </p>
+
+                  <p className="text-sm font-medium text-[#DFB025]">
+                    Smarter Decisions. Stronger Funnels.
+                  </p>
                 </div>
               </AnimatedContainer>
-              {footerLinkGroups.map((group, index) => (
-                <AnimatedContainer
-                  key={group.label}
-                  delay={0.1 + index * 0.1}
-                  className="w-full"
-                >
-                  <div className="mb-10 md:mb-0">
-                    <h3 className="text-sm uppercase">{group.label}</h3>
-                    <ul className="text-muted-foreground mt-4 space-y-2  text-sm md:text-xs lg:text-sm">
-                      {group.links.map((link) => (
-                        <li key={link.title}>
-                          <a
-                            href={link.href}
-                            className="hover:text-yellow-600 inline-flex items-center transition-all duration-300"
-                          >
-                            {link.icon && <link.icon className="me-1 size-4" />}
-                            {link.title}
-                          </a>
-                        </li>
-                      ))}
-                    </ul>
+
+              {/* COL 2: QUICK LINKS (Span 3) */}
+              <AnimatedContainer delay={0.15} className="md:col-span-3">
+                <h4 className="text-sm font-semibold text-white mb-6">
+                  Quick Links
+                </h4>
+                <div className="grid grid-cols-2 gap-4">
+                  <ul className="space-y-2.5 text-sm text-neutral-400">
+                    <li className="hover:text-white transition-colors cursor-pointer">
+                      Home
+                    </li>
+                    <li className="hover:text-white transition-colors cursor-pointer">
+                      Services
+                    </li>
+                    <li className="hover:text-white transition-colors cursor-pointer">
+                      Testimonials
+                    </li>
+                    <li className="hover:text-white transition-colors cursor-pointer">
+                      Contact
+                    </li>
+                    <li className="hover:text-white transition-colors cursor-pointer">
+                      About
+                    </li>
+                  </ul>
+                  <ul className="space-y-2.5 text-sm text-neutral-400">
+                    <li className="hover:text-white transition-colors cursor-pointer">
+                      Work
+                    </li>
+                    <li className="hover:text-white transition-colors cursor-pointer">
+                      Packages
+                    </li>
+                    <li className="hover:text-white transition-colors cursor-pointer">
+                      Store
+                    </li>
+                  </ul>
+                </div>
+              </AnimatedContainer>
+
+              {/* COL 3: NICHES + TOOLS (Span 6) */}
+              <AnimatedContainer delay={0.25} className="md:col-span-6">
+                <h4 className="text-sm font-semibold text-white mb-6">
+                  Niches We Serve
+                </h4>
+                
+                {/* 3-Column Niche Grid */}
+                <div className="grid grid-cols-3 gap-4 mb-10 text-sm text-neutral-400">
+                  <ul className="space-y-2.5">
+                    <li>Dentist</li>
+                    <li>Chiropractor</li>
+                    <li>Painter</li>
+                    <li>Pest Control</li>
+                    <li>Carpet Cleaner</li>
+                  </ul>
+                  <ul className="space-y-2.5">
+                    <li>Physical Therapist</li>
+                    <li>Roofer</li>
+                    <li>Lawyer</li>
+                    <li>Plumber</li>
+                    <li>Electrician</li>
+                  </ul>
+                  <ul className="space-y-2.5">
+                    <li>HVAC</li>
+                    <li>Bookkeeper</li>
+                  </ul>
+                </div>
+
+                {/* Tools We Use */}
+                <div>
+                  <h5 className="text-xs font-semibold text-white mb-3">
+                    Tools We Use
+                  </h5>
+                  <div className="flex flex-wrap gap-2">
+                    {[
+                      "Meta",
+                      "Google",
+                      "GHL",
+                      "Zapier",
+                      "Make",
+                      "N8n",
+                      "GA4",
+                      "GTM",
+                      "Calendars",
+                    ].map((tool) => (
+                      <span
+                        key={tool}
+                        className="rounded-md border border-[#DFB025]/30 px-3 py-1 text-[11px] font-medium text-[#DFB025]"
+                      >
+                        {tool}
+                      </span>
+                    ))}
                   </div>
-                </AnimatedContainer>
-              ))}
+                </div>
+              </AnimatedContainer>
+
             </div>
-            <div className="text-neutral-500 flex flex-col items-center justify-between gap-2 border-t border-white/10 pt-2 text-sm md:flex-row">
-              <p>© 2025 Cognition, Inc. All rights reserved.</p>
-              <p>asme inc.</p>
+
+            {/* BOTTOM BAR */}
+            <div className="absolute bottom-6 left-0 right-0 px-8 md:px-14">
+              <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-4 border-t border-white/10 pt-6 text-sm text-neutral-500">
+                <p>
+                  © 2025 Online Adwise™. All rights reserved. Powered by the
+                  NAREN Method™
+                </p>
+              </div>
             </div>
+
           </div>
         </div>
       </div>
@@ -98,112 +170,44 @@ export function StickyFooter({ className, ...props }: StickyFooterProps) {
   );
 }
 
-const socialLinks = [
-  { title: "Facebook", href: "#", icon: FacebookIcon },
-  { title: "Instagram", href: "#", icon: InstagramIcon },
-  { title: "Youtube", href: "#", icon: YoutubeIcon },
-  { title: "LinkedIn", href: "#", icon: LinkedinIcon },
-];
+/* COLUMN */
+function FooterColumn({
+  title,
+  children,
+}: {
+  title: string;
+  children: React.ReactNode;
+}) {
+  return (
+    <div className="space-y-4">
+      <h4 className="text-sm font-semibold text-white">{title}</h4>
+      <ul className="space-y-2 text-sm text-neutral-400">
+        {children}
+      </ul>
+    </div>
+  );
+}
 
-const footerLinkGroups: FooterLinkGroup[] = [
-  {
-    label: "Product",
-    links: [
-      { title: "Payments", href: "#" },
-      { title: "Cards & Issuing", href: "#" },
-      { title: "Lending & Credit", href: "#" },
-      { title: "Wealth Management", href: "#" },
-      { title: "Insurance", href: "#" },
-      { title: "Crypto Wallets", href: "#" },
-      { title: "FX & Currency Exchange", href: "#" },
-      { title: "Treasury Management", href: "#" },
-      { title: "Merchant Services", href: "#" },
-      { title: "Point of Sale", href: "#" },
-      { title: "Embedded Finance", href: "#" },
-      { title: "Open Banking API", href: "#" },
-      { title: "SDKs & Integrations", href: "#" },
-      { title: "Pricing", href: "#" },
-    ],
-  },
-  {
-    label: "Solutions",
-    links: [
-      { title: "Startups", href: "#" },
-      { title: "Enterprises", href: "#" },
-      { title: "Marketplaces", href: "#" },
-      { title: "Freelancers", href: "#" },
-      { title: "E-commerce", href: "#" },
-      { title: "Banks & Credit Unions", href: "#" },
-      { title: "Investment Platforms", href: "#" },
-      { title: "Insurance Providers", href: "#" },
-      { title: "Payment Gateways", href: "#" },
-      { title: "Government & Public Sector", href: "#" },
-      { title: "Nonprofits", href: "#" },
-      { title: "Education", href: "#" },
-    ],
-  },
-  {
-    label: "Resources",
-    links: [
-      { title: "Blog", href: "#" },
-      { title: "Case Studies", href: "#" },
-      { title: "Documentation", href: "#" },
-      { title: "API Reference", href: "#" },
-      { title: "Developer Tools", href: "#" },
-      { title: "Guides & Tutorials", href: "#" },
-      { title: "Whitepapers", href: "#" },
-      { title: "Reports & Research", href: "#" },
-      { title: "Events & Webinars", href: "#" },
-      { title: "E-books", href: "#" },
-      { title: "Community Forum", href: "#" },
-      { title: "Release Notes", href: "#" },
-      { title: "System Status", href: "#" },
-    ],
-  },
-  {
-    label: "Company",
-    links: [
-      { title: "About Us", href: "#" },
-      { title: "Leadership", href: "#" },
-      { title: "Careers", href: "#" },
-      { title: "Press", href: "#" },
-      { title: "Sustainability", href: "#" },
-      { title: "Diversity & Inclusion", href: "#" },
-      { title: "Investor Relations", href: "#" },
-      { title: "Partners", href: "#" },
-      { title: "Legal & Compliance", href: "#" },
-      { title: "Privacy Policy", href: "#" },
-      { title: "Cookie Policy", href: "#" },
-      { title: "Terms of Service", href: "#" },
-      { title: "AML & KYC Policy", href: "#" },
-      { title: "Regulatory Disclosures", href: "#" },
-    ],
-  },
-];
-
-type AnimatedContainerProps = React.ComponentProps<typeof motion.div> & {
-  children?: React.ReactNode;
-  delay?: number;
-};
-
+/* MOTION */
 function AnimatedContainer({
   delay = 0.1,
+  className,
   children,
-  ...props
-}: AnimatedContainerProps) {
-  const shouldReduceMotion = useReducedMotion();
-
-  if (shouldReduceMotion) {
-    return children;
-  }
+}: {
+  delay?: number;
+  className?: string;
+  children: React.ReactNode;
+}) {
+  const reduce = useReducedMotion();
+  if (reduce) return <div className={className}>{children}</div>;
 
   return (
     <motion.div
-      initial={{ filter: "blur(4px)", translateY: -8, opacity: 0 }}
-      whileInView={{ filter: "blur(0px)", translateY: 0, opacity: 1 }}
+      initial={{ opacity: 0, y: 12 }}
+      whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
-      transition={{ delay, duration: 0.8 }}
-      {...props}
+      transition={{ delay, duration: 0.7 }}
+      className={className}
     >
       {children}
     </motion.div>

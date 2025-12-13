@@ -100,11 +100,11 @@ function GrowthInfrastructure() {
       <div className="max-w-7xl mx-auto px-6">
         {/* HEADER */}
         <div data-aos="fade-up" className="max-w-4xl text-center mx-auto mb-24">
-          <p className="text-sm uppercase tracking-widest font-bold text-yellow-600 mb-4">
+          <p className="text-sm uppercase tracking-widest font-bold text-[#DFB025] mb-4">
             Complete Systems
           </p>
-          <h2 className="text-4xl md:text-6xl font-bold text-white mb-4">
-            Growth Infrastructure
+          <h2 className="text-4xl md:text-6xl font-extrabold text-white mb-4">
+            Growth <span className="text-[#DFB025]">Infrastructure</span>
           </h2>
           <p className="text-base max-w-sm mx-auto text-neutral-400 leading-relaxed">
             Beyond ads — we architect complete growth infrastructure that turns
@@ -129,7 +129,7 @@ function GrowthInfrastructure() {
           {/* RIGHT CONTENT */}
           <div>
             <div className="flex items-center gap-4 mb-6">
-              <Icon className="w-8 h-8 text-yellow-600" />
+              <Icon className="w-8 h-8 text-[#DFB025]" />
               <h3 className="text-3xl font-semibold text-white">
                 {system.title}
               </h3>
@@ -145,7 +145,7 @@ function GrowthInfrastructure() {
               ))}
             </ul>
 
-            <div className="border-l-2 border-yellow-600 pl-6 text-sm text-neutral-400">
+            <div className="border-l-2 border-[#DFB025] pl-6 text-sm text-neutral-400">
               {system.footer}
             </div>
           </div>
