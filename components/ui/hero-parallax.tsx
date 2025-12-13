@@ -104,12 +104,13 @@ export const HeroParallax = ({
 export const Header = () => {
   return (
     <div className="max-w-7xl relative mx-auto py-20 md:py-40 px-4 w-full  left-0 top-0">
-      <h1 className="text-4xl md:text-8xl font-bold text-black">
-        Where Strategy <br /> Meets
-Psychology
+      <h1 className="text-4xl md:text-8xl font-bold text-white leading-tight">
+        Where Strategy <br /> Meets{" "}
+        <span className="text-yellow-600">Psychology</span>
       </h1>
-      <p className="max-w-2xl text-base md:text-xl mt-8 text-neutral-600">
-        Where Ads Become Systems. Where Businesses Grow Predictably.Smarter Decisions. Stronger Funnels. Predictable Growth.
+      <p className="max-w-2xl text-base md:text-xl mt-8 text-neutral-400">
+        Where Ads Become Systems. Where Businesses Grow Predictably. Smarter
+        Decisions. Stronger Funnels. Predictable Growth.
       </p>
     </div>
   );
@@ -135,7 +136,7 @@ export const ProductCard = ({
         y: -20,
       }}
       key={product.title}
-      className="group/product h-96 w-[30rem] relative flex-shrink-0"
+      className="group/product h-96 w-[30rem] relative flex-shrink-0 border border-white/5 rounded-xl overflow-hidden hover:shadow-[0_0_30px_rgba(234,179,8,0.3)] transition-shadow duration-500"
     >
       <Link
         href={product.link}
@@ -149,8 +150,8 @@ export const ProductCard = ({
           alt={product.title}
         />
       </Link>
-      <div className="absolute inset-0 h-full w-full opacity-0 group-hover/product:opacity-80 bg-black pointer-events-none"></div>
-      <h2 className="absolute bottom-4 left-4 opacity-0 group-hover/product:opacity-100 text-white">
+      <div className="absolute inset-0 h-full w-full opacity-0 group-hover/product:opacity-80 bg-black/80 pointer-events-none transition-opacity duration-300"></div>
+      <h2 className="absolute bottom-4 left-4 opacity-0 group-hover/product:opacity-100 text-white font-semibold text-xl">
         {product.title}
       </h2>
     </motion.div>

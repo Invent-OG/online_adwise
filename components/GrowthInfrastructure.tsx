@@ -92,31 +92,31 @@ function GrowthInfrastructure() {
   const system = systems[index];
   const Icon = system.icon;
 
-  const prev = () =>
-    setIndex((index - 1 + systems.length) % systems.length);
+  const prev = () => setIndex((index - 1 + systems.length) % systems.length);
   const next = () => setIndex((index + 1) % systems.length);
 
   return (
-    <section className="w-full bg-white py-28">
+    <section className="w-full bg-black py-28">
       <div className="max-w-7xl mx-auto px-6">
-
         {/* HEADER */}
         <div data-aos="fade-up" className="max-w-4xl text-center mx-auto mb-24">
-          <p className="text-sm uppercase tracking-widest font-bold text-yellow-500 mb-4">
+          <p className="text-sm uppercase tracking-widest font-bold text-yellow-600 mb-4">
             Complete Systems
           </p>
-          <h2 className="text-4xl md:text-6xl font-bold text-neutral-900 mb-4">
+          <h2 className="text-4xl md:text-6xl font-bold text-white mb-4">
             Growth Infrastructure
           </h2>
-          <p className="text-base max-w-sm mx-auto text-neutral-600 leading-relaxed">
+          <p className="text-base max-w-sm mx-auto text-neutral-400 leading-relaxed">
             Beyond ads — we architect complete growth infrastructure that turns
             traffic into revenue and systems into scale.
           </p>
         </div>
 
         {/* CAROUSEL */}
-        <div data-aos="fade-up" className="grid lg:grid-cols-2 gap-16 items-center relative">
-
+        <div
+          data-aos="fade-up"
+          className="grid lg:grid-cols-2 gap-16 items-center relative"
+        >
           {/* LEFT IMAGE */}
           <div className="relative">
             <img
@@ -129,23 +129,23 @@ function GrowthInfrastructure() {
           {/* RIGHT CONTENT */}
           <div>
             <div className="flex items-center gap-4 mb-6">
-              <Icon className="w-8 h-8 text-neutral" />
-              <h3 className="text-3xl font-semibold text-neutral">
+              <Icon className="w-8 h-8 text-yellow-600" />
+              <h3 className="text-3xl font-semibold text-white">
                 {system.title}
               </h3>
             </div>
 
-            <p className="text-gray-600 mb-8 leading-relaxed">
+            <p className="text-neutral-400 mb-8 leading-relaxed">
               {system.description}
             </p>
 
-            <ul className="grid grid-cols-2 gap-y-3 text-sm text-gray-700 mb-8">
+            <ul className="grid grid-cols-2 gap-y-3 text-sm text-neutral-300 mb-8">
               {system.points.map((point, i) => (
                 <li key={i}>{point}</li>
               ))}
             </ul>
 
-            <div className="border-l-2 border-neutral pl-6 text-sm text-gray-700">
+            <div className="border-l-2 border-yellow-600 pl-6 text-sm text-neutral-400">
               {system.footer}
             </div>
           </div>
@@ -154,18 +154,17 @@ function GrowthInfrastructure() {
           <div className="absolute -bottom-16 left-1/2 -translate-x-1/2 flex gap-4">
             <button
               onClick={prev}
-              className="w-12 h-12 rounded-full border border-gray-300 flex items-center justify-center hover:bg-neutral hover:text-white transition"
+              className="w-12 h-12 rounded-full border border-white/20 flex items-center justify-center text-white hover:bg-white hover:text-black transition"
             >
               <ArrowLeft className="w-5 h-5" />
             </button>
             <button
               onClick={next}
-              className="w-12 h-12 rounded-full border border-gray-300 flex items-center justify-center hover:bg-neutral hover:text-white transition"
+              className="w-12 h-12 rounded-full border border-white/20 flex items-center justify-center text-white hover:bg-white hover:text-black transition"
             >
               <ArrowRight className="w-5 h-5" />
             </button>
           </div>
-
         </div>
       </div>
     </section>

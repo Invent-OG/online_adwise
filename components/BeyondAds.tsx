@@ -1,4 +1,3 @@
-
 "use client";
 
 import React, { useEffect, useRef } from "react";
@@ -39,18 +38,22 @@ export default function BeyondAds() {
   }, []);
 
   return (
-    <section ref={sectionRef} className="bg-white">
+    <section ref={sectionRef} className="bg-black">
       {/* INTRO */}
-      <div data-aos="fade-up" className="max-w-7xl text-center mx-auto px-6 pt-32 pb-24">
-        <p className="text-yellow-500 uppercase tracking-widest text-xs font-semibold mb-4">
+      <div
+        data-aos="fade-up"
+        className="max-w-7xl text-center mx-auto px-6 pt-32 pb-24"
+      >
+        <p className="text-yellow-600 uppercase tracking-widest text-xs font-semibold mb-4">
           Beyond Ads
         </p>
-        <h2 className="text-4xl md:text-6xl font-bold text-neutral-950">
+        <h2 className="text-4xl md:text-6xl font-bold text-white">
           Growth Happens <br />
-          <span className="text-neutral-600">In Layers</span>
+          <span className="text-neutral-500">In Layers</span>
         </h2>
-        <p className="mt-6 text-base max-w-sm mx-auto text-neutral-600 ">
-          Each system builds on the previous one — revealed only when it matters.
+        <p className="mt-6 text-base max-w-sm mx-auto text-neutral-400 ">
+          Each system builds on the previous one — revealed only when it
+          matters.
         </p>
       </div>
 
@@ -70,7 +73,7 @@ export default function BeyondAds() {
                 className="sticky top-24 min-h-[75vh] flex items-center justify-center px-6"
                 style={{ zIndex: 10 + index }}
               >
-                <div className="w-full max-w-5xl bg-[#fafafa] rounded-3xl shadow-lg overflow-hidden border border-black/5">
+                <div className="w-full max-w-5xl bg-neutral-900 rounded-3xl shadow-lg overflow-hidden border border-white/10">
                   <div className="grid grid-cols-1 md:grid-cols-2">
                     {/* IMAGE (LEFT OR RIGHT) */}
                     <div
@@ -93,19 +96,17 @@ export default function BeyondAds() {
                         isImageRight ? "md:order-1" : "md:order-2"
                       }`}
                     >
-                      <span className="inline-block text-yellow-500 font-bold mb-3">
+                      <span className="inline-block text-yellow-600 font-bold mb-3">
                         0{service.id}
                       </span>
 
-                      <h3 className="text-2xl md:text-3xl font-bold mb-4">
+                      <h3 className="text-2xl md:text-3xl font-bold mb-4 text-white">
                         {service.title}
                       </h3>
 
-                      <p className="text-black/60 mb-4">
-                        {service.tagline}
-                      </p>
+                      <p className="text-neutral-400 mb-4">{service.tagline}</p>
 
-                      <p className="text-black/70 leading-relaxed mb-6">
+                      <p className="text-neutral-300 leading-relaxed mb-6">
                         {service.description}
                       </p>
 
@@ -113,7 +114,7 @@ export default function BeyondAds() {
                         {service.services.slice(0, 4).map((item, idx) => (
                           <span
                             key={idx}
-                            className="text-xs px-3 py-1 rounded-full bg-yellow-500/10 text-yellow-600 font-medium"
+                            className="text-xs px-3 py-1 rounded-full bg-yellow-600/10 text-yellow-500 font-medium"
                           >
                             {item}
                           </span>

@@ -1,4 +1,3 @@
-
 // "use client";
 
 // import React, { useState, useEffect } from "react";
@@ -358,11 +357,7 @@ const services = [
       },
       {
         name: "Google Growth",
-        features: [
-          "Search + Display",
-          "2–3 Landing Pages",
-          "GA4 Dashboard",
-        ],
+        features: ["Search + Display", "2–3 Landing Pages", "GA4 Dashboard"],
       },
       {
         name: "Google Performance Suite",
@@ -453,15 +448,17 @@ export function AdService() {
   };
 
   return (
-    <section className="bg-white py-28">
+    <section className="bg-black py-28">
       <div className="mx-auto max-w-7xl px-6">
         {/* HEADER */}
         <div data-aos="fade-up" className="mb-20 text-center">
-          <h2 className="text-4xl font-black sm:text-6xl">
-            Platform-Wise <br /> <span className="text-neutral-600">Execution</span>
+          <h2 className="text-4xl font-black text-white sm:text-6xl">
+            Platform-Wise <br />{" "}
+            <span className="text-neutral-500">Execution</span>
           </h2>
-          <p className="mt-4 max-w-sm mx-auto text-base text-neutral-600">
-            Paid Media Execution • Funnel Scaling • Performance Marketing Strategy
+          <p className="mt-4 max-w-sm mx-auto text-base text-neutral-400">
+            Paid Media Execution • Funnel Scaling • Performance Marketing
+            Strategy
           </p>
         </div>
 
@@ -475,8 +472,8 @@ export function AdService() {
                   onClick={() => scrollToSection(s.id)}
                   className={`w-full rounded-xl border px-6 py-5 text-left transition ${
                     activeId === s.id
-                      ? "border-yellow-600 bg-yellow-50"
-                      : "border-neutral-200"
+                      ? "border-yellow-600 bg-yellow-600/10 text-white"
+                      : "border-white/10 text-neutral-400 hover:text-white"
                   }`}
                 >
                   <h4 className="font-bold">{s.title}</h4>
@@ -489,7 +486,11 @@ export function AdService() {
           {/* RIGHT CONTENT (UNCHANGED + IMAGE ADDED) */}
           <div data-aos="fade-down" className="lg:w-2/3 space-y-40">
             {services.map((service) => (
-              <section key={service.id} id={service.id} className="scroll-mt-28">
+              <section
+                key={service.id}
+                id={service.id}
+                className="scroll-mt-28"
+              >
                 {/* IMAGE */}
                 <div className="mb-10 overflow-hidden rounded-3xl">
                   <Image
@@ -503,37 +504,31 @@ export function AdService() {
 
                 {/* EXISTING CONTENT (UNCHANGED) */}
                 <div className="mb-10">
-                  <h3 className="text-3xl font-extrabold">
+                  <h3 className="text-3xl font-extrabold text-white">
                     {service.title}
                   </h3>
-                  <p className="text-neutral-600">
-                    {service.subtitle}
-                  </p>
+                  <p className="text-neutral-400">{service.subtitle}</p>
                 </div>
 
-                <div className="mb-10 rounded-2xl border border-yellow-600/30 bg-yellow-50 px-6 py-4">
-                  <p className="font-semibold text-yellow-700">
-                    NAREN Flow:
-                  </p>
-                  <p className="mt-1 text-sm text-neutral-700">
+                <div className="mb-10 rounded-2xl border border-yellow-600/30 bg-yellow-600/10 px-6 py-4">
+                  <p className="font-semibold text-yellow-500">NAREN Flow:</p>
+                  <p className="mt-1 text-sm text-neutral-300">
                     {service.naren}
                   </p>
                 </div>
 
-                <div className="rounded-3xl border border-neutral-200 bg-neutral-50 p-8">
-                  <h4 className="mb-6 text-xl font-bold">
+                <div className="rounded-3xl border border-white/10 bg-neutral-900 p-8">
+                  <h4 className="mb-6 text-xl font-bold text-white">
                     Execution Framework
                   </h4>
                   <div className="grid gap-4 sm:grid-cols-2">
                     {service.execute.map((item, i) => (
                       <div
                         key={i}
-                        className="flex items-center gap-3 rounded-xl bg-white px-4 py-3 shadow-sm"
+                        className="flex items-center gap-3 rounded-xl bg-black border border-white/5 px-4 py-3 shadow-sm"
                       >
                         <CheckCircle2 className="h-5 w-5 text-yellow-600" />
-                        <span className="text-sm text-neutral-700">
-                          {item}
-                        </span>
+                        <span className="text-sm text-neutral-300">{item}</span>
                       </div>
                     ))}
                   </div>
@@ -544,12 +539,12 @@ export function AdService() {
                     {service.packages.map((pkg, i) => (
                       <div
                         key={i}
-                        className="rounded-2xl border border-neutral-200 bg-white p-6"
+                        className="rounded-2xl border border-white/10 bg-neutral-900 p-6"
                       >
-                        <h5 className="mb-5 font-bold text-yellow-700">
+                        <h5 className="mb-5 font-bold text-yellow-500">
                           {pkg.name}
                         </h5>
-                        <ul className="space-y-3 text-sm text-neutral-600">
+                        <ul className="space-y-3 text-sm text-neutral-400">
                           {pkg.features.map((f, j) => (
                             <li key={j} className="flex gap-3">
                               <span className="mt-2 h-1.5 w-1.5 rounded-full bg-yellow-600" />

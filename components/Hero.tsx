@@ -4,7 +4,7 @@ import { HeroParallax } from "@/components/ui/hero-parallax";
 
 export default function Hero() {
   return (
-    <div className="min-h-screen w-full bg-white">
+    <div className="min-h-screen w-full bg-black">
       <HeroParallax products={products} />
     </div>
   );

@@ -123,20 +123,24 @@ const niches: NicheItem[] = [
 
 export default function NichesSpecialize() {
   return (
-    <section className="w-full py-24 overflow-hidden relative bg-[#F5F7FA]">
+    <section className="w-full py-24 overflow-hidden relative bg-black">
       {/* Header */}
-      <div data-aos="fade-up" className="max-w-7xl mx-auto px-6 mb-16 text-center">
-        <h2 className="text-4xl md:text-6xl font-bold text-slate-900 mb-4">
-          Niches We <br /> <span className="text-neutral-600">Specialize In</span>
+      <div
+        data-aos="fade-up"
+        className="max-w-7xl mx-auto px-6 mb-16 text-center"
+      >
+        <h2 className="text-4xl md:text-6xl font-bold text-white mb-4">
+          Niches We <br />{" "}
+          <span className="text-neutral-500">Specialize In</span>
         </h2>
-        <p className="text-base text-neutral-600">
+        <p className="text-base text-neutral-400">
           Data-driven growth across premium industries.
         </p>
       </div>
 
       {/* Gradients */}
-      <div className="absolute left-0 top-0 bottom-0 w-32 bg-gradient-to-r from-[#F5F7FA] to-transparent z-10" />
-      <div className="absolute right-0 top-0 bottom-0 w-32 bg-gradient-to-l from-[#F5F7FA] to-transparent z-10" />
+      <div className="absolute left-0 top-0 bottom-0 w-32 bg-gradient-to-r from-black to-transparent z-10" />
+      <div className="absolute right-0 top-0 bottom-0 w-32 bg-gradient-to-l from-black to-transparent z-10" />
 
       {/* Marquee */}
       <motion.div
@@ -160,7 +164,7 @@ function MarqueeCard({ item }: { item: NicheItem }) {
   const Icon = item.icon;
 
   return (
-    <div className="w-[260px] shrink-0 group rounded-[26px] overflow-hidden bg-white/60 backdrop-blur-xl border border-white/60 shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-2">
+    <div className="w-[260px] shrink-0 group rounded-[26px] overflow-hidden bg-white/5 backdrop-blur-xl border border-white/10 shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-2">
       {/* Image */}
       <div className="h-40 relative overflow-hidden">
         <img
@@ -168,19 +172,19 @@ function MarqueeCard({ item }: { item: NicheItem }) {
           alt={item.name}
           className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
         />
-        <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent" />
 
-        <div className="absolute top-3 right-3 w-9 h-9 rounded-full bg-white/20 backdrop-blur-md flex items-center justify-center text-white">
+        <div className="absolute top-3 right-3 w-9 h-9 rounded-full bg-black/40 backdrop-blur-md flex items-center justify-center text-white">
           <Icon size={16} />
         </div>
       </div>
 
       {/* Content */}
       <div className="p-5">
-        <h3 className="text-lg font-bold text-neutral-800 mb-2 group-hover:text-yellow-600 transition-colors">
+        <h3 className="text-lg font-bold text-white mb-2 group-hover:text-yellow-600 transition-colors">
           {item.name}
         </h3>
-        <p className="text-sm text-neutral-500 mb-4">{item.description}</p>
+        <p className="text-sm text-neutral-400 mb-4">{item.description}</p>
 
         <div className="flex items-center text-yellow-600 font-semibold text-sm">
           Explore Niche

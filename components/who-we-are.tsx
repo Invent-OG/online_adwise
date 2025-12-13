@@ -1,21 +1,8 @@
-
 "use client";
 
 import React, { useRef } from "react";
-import {
-  motion,
-  useScroll,
-  useTransform,
-  useInView,
-} from "framer-motion";
-import {
-  BrainCircuit,
-  Filter,
-  Zap,
-  Activity,
-  Video,
-  Bot,
-} from "lucide-react";
+import { motion, useScroll, useTransform, useInView } from "framer-motion";
+import { BrainCircuit, Filter, Zap, Activity, Video, Bot } from "lucide-react";
 import { ProfileCard } from "./ui/profile-card";
 
 /* ---------------- DATA ---------------- */
@@ -44,16 +31,13 @@ export function WhoWeAre() {
   return (
     <section
       ref={sectionRef}
-      className="relative w-full min-h-screen bg-white overflow-hidden"
-      
+      className="relative w-full min-h-screen bg-black overflow-hidden"
     >
       {/* STICKY WRAPPER */}
       <div className=" min-h-screen flex items-center">
         <div className="mx-auto max-w-7xl w-full px-6 lg:px-8 grid grid-cols-1 lg:grid-cols-12 gap-16">
-          
           {/* LEFT — MANIFESTO */}
           <motion.div
-          
             ref={headerRef}
             initial={{ opacity: 0, y: 30 }}
             animate={isInView ? { opacity: 1, y: 0 } : {}}
@@ -67,26 +51,26 @@ export function WhoWeAre() {
               </p>
             </div>
 
-            <h2 className="text-4xl font-extrabold tracking-tight text-neutral-900 sm:text-5xl leading-[1.1]">
+            <h2 className="text-4xl font-extrabold tracking-tight text-white sm:text-5xl leading-[1.1]">
               Growth Isn’t Random. <br />
               <span className="text-neutral-500">It’s Architected.</span>
             </h2>
 
-            <p className="mt-8 text-lg leading-relaxed text-neutral-600">
+            <p className="mt-8 text-lg leading-relaxed text-neutral-400">
               Online Adwise™ helps founders escape guesswork by designing
               predictable growth systems — not isolated campaigns.
             </p>
 
-            <div className="mt-8 border-l-2 border-neutral-200 pl-6">
-              <p className="text-xl font-medium italic text-neutral-800">
+            <div className="mt-8 border-l-2 border-yellow-600 pl-6">
+              <p className="text-xl font-medium italic text-neutral-200">
                 "Ads are execution."
               </p>
             </div>
 
-            <p className="mt-8 text-lg leading-relaxed text-neutral-600">
+            <p className="mt-8 text-lg leading-relaxed text-neutral-400">
               Real growth comes from psychology, structure, automation, and
               iteration — unified through the{" "}
-              <span className="font-bold text-neutral-900 underline decoration-neutral-300 underline-offset-4">
+              <span className="font-bold text-white underline decoration-yellow-600 underline-offset-4">
                 NAREN Method™
               </span>
               .
@@ -100,9 +84,9 @@ export function WhoWeAre() {
                 {platforms.map((platform) => (
                   <span
                     key={platform}
-                    className="rounded-full bg-neutral-100 px-5 py-2
-                    text-sm font-semibold text-neutral-700
-                    border border-neutral-200 transition-colors hover:bg-neutral-200 hover:border-neutral-300"
+                    className="rounded-full bg-neutral-900 px-5 py-2
+                    text-sm font-semibold text-neutral-300
+                    border border-neutral-800 transition-colors hover:bg-neutral-800 hover:border-yellow-600/50"
                   >
                     {platform}
                   </span>
@@ -113,7 +97,7 @@ export function WhoWeAre() {
 
           {/* RIGHT — PROFILE CARD */}
           <div className="lg:col-span-7 relative flex items-center justify-center">
-             <ProfileCard />
+            <ProfileCard />
           </div>
         </div>
       </div>

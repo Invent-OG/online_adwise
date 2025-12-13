@@ -1,4 +1,3 @@
-
 // "use client";
 
 // import React, { useEffect, useRef } from "react";
@@ -106,8 +105,7 @@ const cards = [
   {
     step: "Navigate",
     title: "Strategic Clarity",
-    desc:
-      "Before touching ads, we study your industry, customer psychology, funnel gaps, and data accuracy.",
+    desc: "Before touching ads, we study your industry, customer psychology, funnel gaps, and data accuracy.",
     points: [
       "Industry, niche & competition analysis",
       "Customer fears, desires, objections",
@@ -121,8 +119,7 @@ const cards = [
   {
     step: "Attract",
     title: "Creative + Ads System",
-    desc:
-      "We craft attention-pulling assets using proven persuasion triggers and deploy across all major platforms.",
+    desc: "We craft attention-pulling assets using proven persuasion triggers and deploy across all major platforms.",
     points: [
       "Scroll-stopping creatives",
       "High-intent messaging",
@@ -130,14 +127,12 @@ const cards = [
       "Niche-specific videos",
       "Meta, Google, YouTube Ads",
     ],
-    outcome:
-      "You start attracting not just leads — but buyer-ready prospects.",
+    outcome: "You start attracting not just leads — but buyer-ready prospects.",
   },
   {
     step: "Refine",
     title: "Fix + Improve",
-    desc:
-      "Behavior analysis + funnel forensics to optimize every touchpoint in your customer journey.",
+    desc: "Behavior analysis + funnel forensics to optimize every touchpoint in your customer journey.",
     points: [
       "Heatmap study",
       "Drop-off detection",
@@ -151,8 +146,7 @@ const cards = [
   {
     step: "Expand",
     title: "Scale Without Wasting Money",
-    desc:
-      "We scale psychologically and structurally for sustainable growth with predictable ROI.",
+    desc: "We scale psychologically and structurally for sustainable growth with predictable ROI.",
     points: [
       "Multi-geo expansion",
       "Budget scaling",
@@ -165,8 +159,7 @@ const cards = [
   {
     step: "Normalize",
     title: "Predictable System",
-    desc:
-      "Your business now runs on a system — not luck. Marketing becomes stable and reliable.",
+    desc: "Your business now runs on a system — not luck. Marketing becomes stable and reliable.",
     points: [
       "Weekly audits",
       "Creative rotation",
@@ -221,7 +214,7 @@ export default function StickyCard() {
                 if (el) cardsRef.current[index] = el;
               }}
               style={{ zIndex: cards.length - index }}
-              className="absolute inset-0 flex flex-col justify-between rounded-3xl border border-neutral-200 bg-white p-8 shadow-xl transition-shadow duration-300 hover:shadow-2xl bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:24px_24px]"
+              className="absolute inset-0 flex flex-col justify-between rounded-3xl border border-white/10 bg-neutral-900 p-8 shadow-xl transition-shadow duration-300 hover:shadow-2xl hover:shadow-yellow-600/10 bg-[linear-gradient(to_right,#ffffff05_1px,transparent_1px),linear-gradient(to_bottom,#ffffff05_1px,transparent_1px)] bg-[size:24px_24px]"
             >
               <div>
                 {/* Step */}
@@ -230,20 +223,20 @@ export default function StickyCard() {
                 </p>
 
                 {/* Title */}
-                <h3 className="mb-4 text-3xl font-extrabold text-neutral-900">
+                <h3 className="mb-4 text-3xl font-extrabold text-white">
                   {card.title}
                 </h3>
 
                 {/* Description */}
-                <p className="mb-6 text-neutral-600 leading-relaxed">
+                <p className="mb-6 text-neutral-400 leading-relaxed">
                   {card.desc}
                 </p>
 
                 {/* Bullet points */}
-                <ul className="mb-6 space-y-3 text-sm text-neutral-700">
+                <ul className="mb-6 space-y-3 text-sm text-neutral-300">
                   {card.points.map((point, i) => (
                     <li key={i} className="flex items-start gap-3">
-                      <span className="mt-1.5 h-2 w-2 shrink-0 rounded-full bg-yellow-500" />
+                      <span className="mt-1.5 h-2 w-2 shrink-0 rounded-full bg-yellow-600" />
                       <span>{point}</span>
                     </li>
                   ))}
@@ -251,7 +244,7 @@ export default function StickyCard() {
               </div>
 
               {/* Outcome */}
-              <div className="rounded-xl border border-yellow-100 bg-yellow-50/50 p-4 text-sm font-medium text-yellow-800">
+              <div className="rounded-xl border border-yellow-600/20 bg-yellow-600/10 p-4 text-sm font-medium text-yellow-500">
                 <span className="mr-2">📌</span>
                 <strong>Outcome:</strong> {card.outcome}
               </div>
@@ -261,9 +254,9 @@ export default function StickyCard() {
 
         {/* Heading (Now Right) */}
         <div data-aos="fade-left" className="max-w-md">
-          <h1 className="text-5xl font-extrabold leading-tight text-neutral-900">
+          <h1 className="text-5xl font-extrabold leading-tight text-white">
             WHAT YOUR WEBSITE <br />
-            <span className="text-neutral-400">TRULY NEEDS</span>
+            <span className="text-neutral-500">TRULY NEEDS</span>
           </h1>
         </div>
       </div>
