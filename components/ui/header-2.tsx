@@ -29,11 +29,11 @@ export function Header() {
 	return (
 		<header
 	className={cn(
-		'sticky top-1 z-50 mx-auto w-full max-w-6xl rounded-full border border-transparent transition-all duration-300 ease-out',
-		'backdrop-blur-md bg-transparent supports-[backdrop-filter]:bg-black/10 shadow-lg',
+		'sticky top-1 z-50 mx-auto w-full max-w-6xl rounded-full border border-white/20 transition-all duration-300 ease-out',
+		'backdrop-blur-xl bg-white/30 supports-[backdrop-filter]:bg-white/30 shadow-lg',
 		{
-			'md:top-4 md:shadow-xl md:border-border bg-black/10': scrolled && !open,
-			'bg-transparent backdrop-blur-2xl shadow-2xl': open,
+			'md:top-4 md:shadow-xl md:border-white/30 bg-white/40': scrolled && !open,
+			'bg-white/50 backdrop-blur-2xl shadow-2xl': open,
 		},
 	)}
 >

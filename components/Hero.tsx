@@ -1,75 +1,107 @@
 "use client";
-
-import React, { useRef } from "react";
-import { Button } from "@/components/ui/button";
-import gsap from "gsap";
-import { useGSAP } from "@gsap/react";
+import React from "react";
+import { HeroParallax } from "@/components/ui/hero-parallax";
 
 export default function Hero() {
-  const containerRef = useRef(null);
-
-  useGSAP(
-    () => {
-      const tl = gsap.timeline({ defaults: { ease: "power3.out" } });
-
-      tl.from(".hero-text", {
-        y: 50,
-        opacity: 0,
-        duration: 1,
-        stagger: 0.2,
-      })
-        .from(
-          ".hero-buttons",
-          {
-            y: 20,
-            opacity: 0,
-            duration: 0.8,
-          },
-          "-=0.5"
-        )
-        .from(
-          ".hero-bg-shape",
-          {
-            scale: 0.8,
-            opacity: 0,
-            duration: 1.5,
-            ease: "elastic.out(1, 0.3)",
-          },
-          0
-        );
-    },
-    { scope: containerRef }
-  );
-
   return (
-    <section
-      ref={containerRef}
-      className="relative flex min-h-[90vh] w-full flex-col items-center justify-center overflow-hidden bg-background px-4 py-24 text-center md:px-8"
-    >
-      {/* Background Shapes */}
-      <div className="hero-bg-shape absolute -top-20 -left-20 h-64 w-64 rounded-full bg-primary/10 blur-3xl filter md:h-96 md:w-96" />
-      <div className="hero-bg-shape absolute -bottom-20 -right-20 h-64 w-64 rounded-full bg-blue-500/10 blur-3xl filter md:h-96 md:w-96" />
-      <div className="hero-bg-shape absolute top-1/2 left-1/2 h-96 w-96 -translate-x-1/2 -translate-y-1/2 rounded-full bg-purple-500/5 blur-3xl filter" />
-
-      <div className="z-10 max-w-5xl space-y-8">
-        <h1 className="hero-text text-5xl font-extrabold tracking-tight sm:text-6xl md:text-7xl lg:text-8xl">
-          Transform Your <br className="hidden md:block" />
-          <span className="bg-gradient-to-r from-primary to-blue-600 bg-clip-text text-transparent">
-            Digital Presence
-          </span>
-        </h1>
-        <p className="hero-text mx-auto max-w-2xl text-lg text-muted-foreground sm:text-xl md:text-2xl">
-          We build modern, scalable, and high-performance web applications tailored to your business needs. Elevate your brand with our expert solutions.
-        </p>
-        <div className="hero-buttons flex flex-col items-center justify-center gap-4 sm:flex-row">
-          <Button size="lg" className="h-14 px-8 text-lg rounded-full">
-            Get Started
-          </Button>
-          <Button size="lg" variant="outline" className="h-14 px-8 text-lg rounded-full">
-            Learn More
-          </Button>
-        </div>
-      </div>
-    </section>
+    <div className="min-h-screen w-full bg-white">
+      <HeroParallax products={products} />
+    </div>
   );
 }
+
+export const products = [
+  {
+    title: "Moonbeam",
+    link: "https://gomoonbeam.com",
+    thumbnail:
+      "https://images.unsplash.com/photo-1517694712202-14dd9538aa97?q=80&w=1000&auto=format&fit=crop",
+  },
+  {
+    title: "Cursor",
+    link: "https://cursor.so",
+    thumbnail:
+      "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?q=80&w=1000&auto=format&fit=crop",
+  },
+  {
+    title: "Rogue",
+    link: "https://userogue.com",
+    thumbnail:
+      "https://images.unsplash.com/photo-1555066931-4365d14bab8c?q=80&w=1000&auto=format&fit=crop",
+  },
+
+  {
+    title: "Editorially",
+    link: "https://editorially.org",
+    thumbnail:
+      "https://images.unsplash.com/photo-1542831371-29b0f74f9713?q=80&w=1000&auto=format&fit=crop",
+  },
+  {
+    title: "Editrix AI",
+    link: "https://editrix.ai",
+    thumbnail:
+      "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?q=80&w=1000&auto=format&fit=crop",
+  },
+  {
+    title: "Pixel Perfect",
+    link: "https://app.pixelperfect.quest",
+    thumbnail:
+      "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?q=80&w=1000&auto=format&fit=crop",
+  },
+
+  {
+    title: "Algochurn",
+    link: "https://algochurn.com",
+    thumbnail:
+      "https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=1000&auto=format&fit=crop",
+  },
+  {
+    title: "Aceternity UI",
+    link: "https://ui.aceternity.com",
+    thumbnail:
+      "https://images.unsplash.com/photo-1504639725590-34d0984388bd?q=80&w=1000&auto=format&fit=crop",
+  },
+  {
+    title: "Tailwind Master Kit",
+    link: "https://tailwindmasterkit.com",
+    thumbnail:
+      "https://images.unsplash.com/photo-1498050108023-c5249f4df085?q=80&w=1000&auto=format&fit=crop",
+  },
+  {
+    title: "SmartBridge",
+    link: "https://smartbridgetech.com",
+    thumbnail:
+      "https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=1000&auto=format&fit=crop",
+  },
+  {
+    title: "Renderwork Studio",
+    link: "https://renderwork.studio",
+    thumbnail:
+      "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?q=80&w=1000&auto=format&fit=crop",
+  },
+
+  {
+    title: "Creme Digital",
+    link: "https://cremedigital.com",
+    thumbnail:
+      "https://images.unsplash.com/photo-1507238691740-187a5b1d37b8?q=80&w=1000&auto=format&fit=crop",
+  },
+  {
+    title: "Golden Bells Academy",
+    link: "https://goldenbellsacademy.com",
+    thumbnail:
+      "https://images.unsplash.com/photo-1531403009284-440f080d1e12?q=80&w=1000&auto=format&fit=crop",
+  },
+  {
+    title: "Invoker Labs",
+    link: "https://invoker.lol",
+    thumbnail:
+      "https://images.unsplash.com/photo-1522071820081-009f0129c71c?q=80&w=1000&auto=format&fit=crop",
+  },
+  {
+    title: "E Free Invoice",
+    link: "https://efreeinvoice.com",
+    thumbnail:
+      "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?q=80&w=1000&auto=format&fit=crop",
+  },
+];

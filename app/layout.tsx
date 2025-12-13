@@ -3,6 +3,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { Header } from "@/components/ui/header-2";
 import { StickyFooter } from "@/components/ui/sticky-footer";
+import LenisProvider from "@/components/LenisProvider";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -29,9 +30,11 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        <Header />
-        {children}
-        <StickyFooter />
+        <LenisProvider>
+          <Header />
+          {children}
+          <StickyFooter />
+        </LenisProvider>
       </body>
     </html>
   );
